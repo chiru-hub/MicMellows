@@ -5,10 +5,10 @@
         <div class="pt-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
-            class="text-left w-3/5 mt-10 mx-auto"
+            class="text-left sm:w-auto md:w-3/5 mt-10 mx-auto"
           >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt officia nemo quasi harum praesentium recusandae porro odit doloribus, quod at.</p>
         </div>
-        <div class="px-64 pt-20 flex flex-row justify-between">
+        <div class="sm:px-0 md:px-64 pt-20 flex flex-row justify-between">
           <div class="first-part-cards"></div>
           <div class="first-part-cards"></div>
           <div class="first-part-cards"></div>
