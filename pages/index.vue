@@ -33,6 +33,27 @@
         </div>
       </div>
     </div>
+    <div class="third-part">
+      <div class="lg:container px-0 md:px-20 py-40">
+        <h1 class="text-center">What they are Saying?</h1>
+        <div class="flex pt-20 justify-around">
+          <div class="w-1/2 third-part-cards">
+            <img src="/images/wts1.png" alt />
+          </div>
+          <div class="w-1/2 third-part-cards">
+            <img src="/images/wts2.png" alt />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fourth-part">
+      <div class="lg:container py-40">
+        <div>
+          <h1 class="text-center">About MicMellows</h1>
+          <img class="m-auto" src="/images/about.png" alt />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <style scoped lang='scss'>
@@ -94,6 +115,30 @@
       rgba(4, 4, 4, 0) 22%,
       #111111
     );
+  }
+}
+
+.third-part {
+  background-image: linear-gradient(#cd1e01 50%, #f8650c 50%);
+
+  h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  &-cards {
+    height: 55.5rem;
+  }
+}
+
+.fourth-part {
+  background-image: linear-gradient(#cd1e01 20%, #f8650c 80%);
+
+  h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
   }
 }
 </style>

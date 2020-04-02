@@ -42,4 +42,10 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
 }
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
