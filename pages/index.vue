@@ -21,12 +21,33 @@
           <div class="first-part-cards"></div>
           <div class="first-part-cards"></div>
         </div>
-        <div class="px-0 md:px-20">
+        <div class="px-0 md:px-20 pb-32">
           <h1 class="text-center md:pb-20">Featured Courses</h1>
           <div class="flex md:flex-row justify-between">
-            <div class="first-part-cards2"></div>
-            <div class="first-part-cards2"></div>
-            <div class="first-part-cards2"></div>
+            <div class="first-part-cards2">
+              <img style="border-radius:.8rem" src="/images/fc1.jpg" alt />
+              <div style="margin-top:-2rem" class="cards-content text-center">
+                <h4>Marshmallows ( 8 to 18 years)</h4>
+                <p>Level 1 Launched( Public speaking, Communication Skills, Listening skills, Goal setting, Memory Building)</p>
+                <button style="margin-top:10px">Enroll</button>
+              </div>
+            </div>
+            <div class="first-part-cards2">
+              <img style="border-radius:.8rem" src="/images/fc2.jpg" alt />
+              <div style="margin-top:-2rem" class="cards-content text-center">
+                <h4>Exclusive Women Batch</h4>
+                <p>Level 1 - Launched ( Public speaking, Communication Skills, Listening skills)</p>
+                <button style="margin-top:10px">Enroll</button>
+              </div>
+            </div>
+            <div class="first-part-cards2">
+              <img style="border-radius:.8rem" src="/images/fc3.jpg" alt />
+              <div style="margin-top:-2rem" class="cards-content text-center">
+                <h4>Professionals</h4>
+                <p>Level 1 - Launched ( Public speaking, Presentation mastery, Listening skills, Interview skills)</p>
+                <button style="margin-top:10px">Enroll</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -45,11 +66,25 @@
       <div class="lg:container px-0 md:px-20 py-40">
         <h1 class="text-center">What they are Saying?</h1>
         <div class="flex pt-20 justify-around">
-          <div class="w-1/2 third-part-cards">
-            <img src="/images/wts1.png" alt />
+          <div class="w-2/5 flex justify-center third-part-cards">
+            <img class="w-full" src="/images/wts1.jpg" alt />
+            <div class="cards-content w-10/12 text-center">
+              <h4>Dr. Catherine M. Cain</h4>
+              <p>Ph. D., CRC, LPCC-S</p>
+              <p
+                class="mt-10"
+              >This course is a “must have” for anyone seeking increased personal empowerment, and I highly recommend it to all seeking personal growth.</p>
+            </div>
           </div>
-          <div class="w-1/2 third-part-cards">
-            <img src="/images/wts2.png" alt />
+          <div class="w-2/5 flex justify-center third-part-cards">
+            <img class="w-full" src="/images/wts2.jpg" alt />
+            <div class="cards-content w-10/12 text-center">
+              <h4>Brandon Ribak</h4>
+              <p>Ph. D., CRC, LPCC-S</p>
+              <p
+                class="mt-10"
+              >This course is a “must have” for anyone seeking increased personal empowerment, and I highly recommend it to all seeking personal growth.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -61,7 +96,7 @@
           <img class="m-auto" src="/images/about.png" alt />
         </div>
         <p
-          class="w-4/5 text-center mx:auto"
+          class="w-4/5 text-center"
         >Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sequi officiis possimus iusto perferendis cumque libero praesentium rerum illum quidem, doloremque vitae blanditiis asperiores illo eos quae voluptate ullam tempore dolore nesciunt aperiam aliquam provident, tenetur consequuntur. Reprehenderit, possimus praesentium!</p>
         <h1 class="text-center my-24">Get in Touch</h1>
         <div class="form md:px-64">
@@ -76,15 +111,24 @@
             <button>SEND</button>
           </div>
         </div>
+        <div class="maps"></div>
       </div>
     </div>
   </div>
 </template>
 <style scoped lang='scss'>
+button {
+  height: 4rem;
+  width: 12rem;
+  border: 2px solid #f26101;
+  border-radius: 8px;
+  color: white;
+}
+
 .join-now {
   background-image: url(/images/microphone.png);
   background-position: center;
-  height: 50vw;
+  min-height: 50vw;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -102,13 +146,6 @@
       font-size: 1.8rem;
       color: white;
       line-height: 1.5;
-    }
-    button {
-      height: 4rem;
-      width: 12rem;
-      border: 2px solid #f26101;
-      border-radius: 8px;
-      color: white;
     }
   }
 }
@@ -134,6 +171,24 @@
     width: 21.8rem;
     background-color: white;
     border-radius: 8px;
+    position: relative;
+  }
+
+  &-cards::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(4, 4, 4, 0) 22%,
+      #111111
+    );
+    box-shadow: -12px 12px 30px 0 rgba(199, 93, 23, 0.16);
+    border-radius: 8px;
   }
 
   &-cards2 {
@@ -141,13 +196,24 @@
     height: 435px;
     object-fit: contain;
     border-radius: 8px;
-    box-shadow: -12px 12px 30px 0 rgba(199, 93, 23, 0.16);
+    position: relative;
+  }
+
+  &-cards2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(4, 4, 4, 0) 22%,
       #111111
     );
+    box-shadow: -12px 12px 30px 0 rgba(199, 93, 23, 0.16);
+    border-radius: 8px;
   }
 }
 
@@ -185,6 +251,27 @@
 
   &-cards {
     height: 55.5rem;
+    position: relative;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+  &-cards::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(4, 4, 4, 0) 22%,
+      #111111
+    );
+    box-shadow: -12px 12px 30px 0 rgba(199, 93, 23, 0.16);
+    border-radius: 8px;
   }
 }
 
@@ -201,6 +288,7 @@
     font-size: 2rem;
     text-align: center;
     line-height: 30px;
+    margin: auto;
   }
 
   button {
@@ -227,6 +315,25 @@
     padding: 0.9rem;
     color: white;
     width: 100%;
+  }
+}
+
+.cards-content {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 68%;
+
+  h4 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: white;
+    font-size: 1.4rem;
+    min-height: 6.2rem;
   }
 }
 </style>
