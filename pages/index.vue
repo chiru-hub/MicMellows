@@ -28,7 +28,9 @@
               <img style="border-radius:.8rem" src="/images/fc1.jpg" alt />
               <div style="margin-top:-2rem" class="cards-content text-center">
                 <h4>Marshmallows ( 8 to 18 years)</h4>
-                <p>Level 1 Launched( Public speaking, Communication Skills, Listening skills, Goal setting, Memory Building)</p>
+                <p
+                  style="min-height: 6.2rem;"
+                >Level 1 Launched( Public speaking, Communication Skills, Listening skills, Goal setting, Memory Building)</p>
                 <button style="margin-top:10px">Enroll</button>
               </div>
             </div>
@@ -36,7 +38,9 @@
               <img style="border-radius:.8rem" src="/images/fc2.jpg" alt />
               <div style="margin-top:-2rem" class="cards-content text-center">
                 <h4>Exclusive Women Batch</h4>
-                <p>Level 1 - Launched ( Public speaking, Communication Skills, Listening skills)</p>
+                <p
+                  style="min-height: 6.2rem;"
+                >Level 1 - Launched ( Public speaking, Communication Skills, Listening skills)</p>
                 <button style="margin-top:10px">Enroll</button>
               </div>
             </div>
@@ -44,7 +48,9 @@
               <img style="border-radius:.8rem" src="/images/fc3.jpg" alt />
               <div style="margin-top:-2rem" class="cards-content text-center">
                 <h4>Professionals</h4>
-                <p>Level 1 - Launched ( Public speaking, Presentation mastery, Listening skills, Interview skills)</p>
+                <p
+                  style="min-height: 6.2rem;"
+                >Level 1 - Launched ( Public speaking, Presentation mastery, Listening skills, Interview skills)</p>
                 <button style="margin-top:10px">Enroll</button>
               </div>
             </div>
@@ -79,11 +85,11 @@
           <div class="w-2/5 flex justify-center third-part-cards">
             <img class="w-full" src="/images/wts2.jpg" alt />
             <div class="cards-content w-10/12 text-center">
-              <h4>Brandon Ribak</h4>
+              <h4>Dr. Saumendu</h4>
               <p>Ph. D., CRC, LPCC-S</p>
               <p
                 class="mt-10"
-              >This course is a “must have” for anyone seeking increased personal empowerment, and I highly recommend it to all seeking personal growth.</p>
+              >"Children are budding flowers of humanity. Let them learn for the love of learning, explore for the sake of finding their own path. Let our flowers bloom, bloom brightly."</p>
             </div>
           </div>
         </div>
@@ -97,7 +103,7 @@
         </div>
         <p
           class="w-4/5 text-center"
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sequi officiis possimus iusto perferendis cumque libero praesentium rerum illum quidem, doloremque vitae blanditiis asperiores illo eos quae voluptate ullam tempore dolore nesciunt aperiam aliquam provident, tenetur consequuntur. Reprehenderit, possimus praesentium!</p>
+        >Micmellows is a professional Public Speaking and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing. Micmellows gives exposure and a platform to individuals to develop their personality and and gain an edge over others in their field.</p>
         <h1 class="text-center my-24">Get in Touch</h1>
         <div class="form md:px-64">
           <div>
@@ -333,7 +339,6 @@ button {
   p {
     color: white;
     font-size: 1.4rem;
-    min-height: 6.2rem;
   }
 }
 </style>
