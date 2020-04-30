@@ -1,7 +1,7 @@
 <template>
   <div>
-    <nav class="shadow md:absolute md:w-full" role="navigation">
-      <div class="container mx-auto p-4 flex flex-wrap items-center md:flex-no-wrap">
+    <nav class="shadow absolute md:w-full" role="navigation">
+      <div class="container mx-auto py-8 flex flex-wrap items-center md:flex-no-wrap">
         <div class="mr-4 md:mr-8">
           <a href="#" rel="home">
             <svg
@@ -32,34 +32,27 @@
             class="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:border-0"
           >
             <li>
-              <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Link</a>
-            </li>
-            <li>
-              <a
-                class="block px-4 py-1 md:p-2 lg:px-4 text-purple-600"
-                href="#"
-                title="Active Link"
-              >Active Link</a>
-            </li>
-            <li>
-              <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Link</a>
+              <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Micmellows</a>
             </li>
           </ul>
           <ul
             class="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0"
           >
             <li>
-              <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Link</a>
+              <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Articles</a>
             </li>
             <li>
               <a
                 class="block px-4 py-1 md:p-2 lg:px-4 text-purple-600"
                 href="#"
                 title="Active Link"
-              >Active Link</a>
+              >Training</a>
             </li>
             <li>
-              <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Link</a>
+              <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Quotes</a>
+            </li>
+            <li>
+              <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">About</a>
             </li>
           </ul>
         </div>
@@ -74,7 +67,7 @@ nav {
     font-size: 3rem;
     font-weight: 600;
   }
-  a::not(:first-child) {
+  a {
     color: white;
     font-size: 2.5rem;
   }
