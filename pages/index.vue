@@ -3,9 +3,9 @@
     <div class="join-now">
       <Header />
       <div class="join-now-contents w-full md:w-2/6 md:pl-40">
-        <h2 class="text-center md:text-left">Unfold Dreams Within</h2>
-        <p>Micmellows is a professional Public Speaking and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing.</p>
-        <button class="mt-20">Join Now</button>
+        <h2 style="color:#f26101;" class="text-center md:text-left">Unfold Dreams Within</h2>
+        <p style="color:black">Micmellows is a professional Public Speaking and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing.</p>
+        <button style="color:black" class="mt-20">Join Now</button>
       </div>
     </div>
     <div class="first-part">
@@ -17,9 +17,15 @@
           >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
         </div>
         <div class="px-0 md:px-64 pb-40 pt-20 flex md:flex-row flex-col justify-between">
-          <div class="first-part-cards"></div>
-          <div class="first-part-cards"></div>
-          <div class="first-part-cards"></div>
+          <div class="first-part-cards">
+            <img src="/images/wmm1.jpg" alt="">
+          </div>
+          <div class="first-part-cards">
+            <img src="/images/wmm2.jpg" alt="">
+          </div>
+          <div class="first-part-cards">
+            <img src="/images/wmm3.jpg" alt="">
+          </div>
         </div>
         <div class="px-0 md:px-20 pb-32">
           <h1 class="text-center md:pb-20">Featured Courses</h1>
@@ -62,9 +68,15 @@
       <div class="lg:container pb-40">
         <h1 class="text-center pt-24 pb-20">Our Events</h1>
         <div class="flex md:flex-row justify-between px-0 md:px-20">
-          <div class="second-part-cards2"></div>
-          <div class="second-part-cards2"></div>
-          <div class="second-part-cards2"></div>
+          <div class="second-part-cards2">
+            <img src="/images/our-events-1.jpg" alt="">
+          </div>
+          <div class="second-part-cards2">
+            <img src="/images/our-events-2.jpg" alt="">
+          </div>
+          <div class="second-part-cards2">
+            <img src="/images/our-events-3.jpg" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -99,7 +111,7 @@
       <div class="md:container px-1 py-1 sm:py-10 sm:px-10 lg:py-40 lg:px-40">
         <div>
           <h1 class="text-center">About MicMellows</h1>
-          <img class="m-auto" src="/images/about.png" alt />
+          <img class="m-auto" src="/images/about-mic-2.jpg" alt />
         </div>
         <p
           class="w-4/5 text-center"
@@ -132,7 +144,7 @@ button {
 }
 
 .join-now {
-  background-image: url(/images/microphone.png);
+  background-image: url(/images/web_cover.jpg);
   background-position: center;
   min-height: 50vw;
   background-repeat: no-repeat;
@@ -170,6 +182,10 @@ button {
     font-size: 2rem;
     font-weight: 300;
     opacity: 0.7;
+  }
+
+  img {
+    border-radius:8px;
   }
 
   &-cards {
@@ -234,15 +250,27 @@ button {
   &-cards2 {
     width: 339px;
     height: 435px;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: -12px 12px 30px 0 rgba(199, 93, 23, 0.16);
+    position: relative;
+
+    img{
+      border-radius: 8px;
+    }
+  }
+  &-cards2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(4, 4, 4, 0) 22%,
       #111111
     );
+    box-shadow: -12px 12px 30px 0 rgba(199, 93, 23, 0.16);
+    border-radius: 8px;
   }
 }
 
@@ -295,6 +323,7 @@ button {
     text-align: center;
     line-height: 30px;
     margin: auto;
+    margin-top: 2rem;
   }
 
   button {

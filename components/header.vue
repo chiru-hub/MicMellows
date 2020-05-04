@@ -63,12 +63,12 @@
 <style lang="scss" scoped>
 nav {
   a:first-child {
-    color: white;
+    color: black;
     font-size: 3rem;
     font-weight: 600;
   }
   a {
-    color: white;
+    color: black;
     font-size: 2.5rem;
   }
 }
