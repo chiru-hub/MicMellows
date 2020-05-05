@@ -1,13 +1,42 @@
 <template>
   <div>
-    <div class="join-now">
+    <!-- <div class="join-now">
       <Header />
       <div class="join-now-contents w-full md:w-2/6 md:pl-40">
         <h2 class="text-center md:text-left">Unfold Dreams Within</h2>
         <p>Micmellows is a professional Public Speaking and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing.</p>
         <button class="mt-16">Join Now</button>
       </div>
+    </div> -->
+
+ <div class="header">
+    <div style="position:absolute;z-index:99;left:0;right:0;margin:auto;top:0;bottom:0;">
+        <div class="join-now-contents w-full">
+        <div class="container carousel-text">
+                <h2 class="text-left">Unfold Dreams Within</h2>
+                <p>Micmellows is a professional Public Speaking and Personality </p>
+                <p>Development Institute with a vision to ensure every individual identify </p>
+                <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
+                <button class="mt-16"  v-scroll-to="{
+                el: '.contact',
+                duration: 1000,
+            }">Join Now</button>
+              </div>
+              </div>
     </div>
+    <client-only>
+      <slick class="homepageSlider" ref="carousel" :options="slickOptions">
+        <div v-for="p in homeslider" :key="p.id">
+          <img
+            class="d-block w-100 img1"
+            :src="p"
+            alt="First slide"
+          />
+        </div>
+      </slick>
+    </client-only>
+ </div>
+
     <div class="first-part">
       <div class="container px-5">
         <div class="p-12">
@@ -17,14 +46,20 @@
           >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
         </div>
         <div class="px-0 pb-40 pt-20 flex w-full flex-wrap">
-          <div class="w-full md:w-1/3 p-5 md:pr-4">
-            <div class="first-part-cards"></div>
+          <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:pr-4">
+            <div class="first-part-cards">
+              <img src="/images/MIC_4_M2-01.jpg" class="w-full h-full object-cover" />
+            </div>
           </div>
-          <div class="w-full md:w-1/3 p-5 md:px-2">
-            <div class="first-part-cards"></div>
+          <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:px-2">
+            <div class="first-part-cards">
+              <img src="/images/MIC_5.jpg" class="w-full h-full object-cover" />
+            </div>
           </div>
-          <div class="w-full md:w-1/3 p-5 md:pl-4">
-            <div class="first-part-cards"></div>
+          <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:pl-4">
+            <div class="first-part-cards">
+              <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
+            </div>
           </div>
         </div>
         <div class="px-0 pb-32">
@@ -43,7 +78,10 @@
                   <p
                     style="min-height: 6.2rem;"
                   >Level 1 Launched( Public speaking, Communication Skills, Listening skills, Goal setting, Memory Building)</p>
-                  <button style="margin-top:10px">Enroll</button>
+                  <button style="margin-top:10px" v-scroll-to="{
+                el: '.contact',
+                duration: 1000,
+            }">Enroll</button>
                 </div>
               </div>
             </div>
@@ -60,7 +98,10 @@
                   <p
                     style="min-height: 6.2rem;"
                   >Level 1 - Launched ( Public speaking, Communication Skills, Listening skills)</p>
-                  <button style="margin-top:10px">Enroll</button>
+                  <button style="margin-top:10px" v-scroll-to="{
+                el: '.contact',
+                duration: 1000,
+            }">Enroll</button>
                 </div>
               </div>
             </div>
@@ -77,7 +118,10 @@
                   <p
                     style="min-height: 6.2rem;"
                   >Level 1 - Launched ( Public speaking, Presentation mastery, Listening skills, Interview skills)</p>
-                  <button style="margin-top:10px">Enroll</button>
+                  <button style="margin-top:10px" v-scroll-to="{
+                el: '.contact',
+                duration: 1000,
+            }">Enroll</button>
                 </div>
               </div>
             </div>
@@ -95,15 +139,18 @@
               <img
                 style="border-radius:.8rem"
                 class="w-full h-full object-cover"
-                src="/images/fc1.jpg"
+                src="/images/our-events-1.jpg"
                 alt
               />
-              <div style="margin-top:-2rem" class="cards-content text-center px-5">
-                <h4>Marshmallows ( 8 to 18 years)</h4>
-                <p
+              <div style="margin-top:-2rem" class="cards-content text-center  w-full  px-5">
+                <!-- <h4>Marshmallows ( 8 to 18 years)</h4> -->
+                <!-- <p
                   style="min-height: 6.2rem;"
-                >Level 1 Launched( Public speaking, Communication Skills, Listening skills, Goal setting, Memory Building)</p>
-                <button style="margin-top:10px">Set Reminder</button>
+                >Level 1 Launched( Public speaking, Communication Skills, Listening skills, Goal setting, Memory Building)</p> -->
+                <button style="margin-top:10px" v-scroll-to="{
+                el: '.contact',
+                duration: 1000,
+            }">Set Reminder</button>
               </div>
             </div>
           </div>
@@ -112,15 +159,18 @@
               <img
                 style="border-radius:.8rem"
                 class="w-full h-full object-cover"
-                src="/images/fc2.jpg"
+                src="/images/our-events-2.jpg"
                 alt
               />
               <div style="margin-top:-2rem" class="cards-content text-center w-full px-5">
-                <h4>Exclusive Women Batch</h4>
-                <p
+                <!-- <h4>Exclusive Women Batch</h4> -->
+                <!-- <p
                   style="min-height: 6.2rem;"
-                >Level 1 - Launched ( Public speaking, Communication Skills, Listening skills)</p>
-                <button style="margin-top:10px">Set Reminder</button>
+                >Level 1 - Launched ( Public speaking, Communication Skills, Listening skills)</p> -->
+                <button style="margin-top:10px"  v-scroll-to="{
+                el: '.contact',
+                duration: 1000,
+            }">Set Reminder</button>
               </div>
             </div>
           </div>
@@ -129,15 +179,18 @@
               <img
                 style="border-radius:.8rem"
                 class="w-full h-full object-cover"
-                src="/images/fc3.jpg"
+                src="/images/our-events-3.jpg"
                 alt
               />
               <div style="margin-top:-2rem" class="cards-content text-center w-full px-5">
-                <h4>Professionals</h4>
-                <p
+                <!-- <h4>Professionals</h4> -->
+                <!-- <p
                   style="min-height: 6.2rem;"
-                >Level 1 - Launched ( Public speaking, Presentation mastery, Listening skills, Interview skills)</p>
-                <button style="margin-top:10px">Set Reminder</button>
+                >Level 1 - Launched ( Public speaking, Presentation mastery, Listening skills, Interview skills)</p> -->
+                <button style="margin-top:10px" v-scroll-to="{
+                el: '.contact',
+                duration: 1000,
+            }">Set Reminder</button>
               </div>
             </div>
           </div>
@@ -185,16 +238,18 @@
           class="w-4/5 text-center"
         >Micmellows is a professional Public Speaking and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing. Micmellows gives exposure and a platform to individuals to develop their personality and and gain an edge over others in their field.</p>
         <h1 class="text-center my-24">Get in Touch</h1>
-        <div class="form">
+        <div class="form contact px-5 pb-10">
           <div>
-            <input type="text" placeholder="Your Name here" name id />
-          </div>
-          <div class="mt-10">
-            <textarea placeholder="Your Message Here" id rows="10"></textarea>
+            <input type="text" v-model="name" placeholder="Your Name here" name id />
           </div>
           <div class="mt-10 sm:flex justify-between">
-            <input style="width:70%" placeholder="Your E-mail" type="email" name id />
-            <button>SEND</button>
+            <input class="w-full" v-model="email" placeholder="Your E-mail" type="email" name id />
+          </div>
+          <div class="mt-10">
+            <textarea v-model="message" placeholder="Your Message Here" id rows="10"></textarea>
+          </div>
+          <div class="mt-10 sm:flex justify-between">
+            <button @click="sendEmail" type="button" class="w-full">SEND</button>
           </div>
         </div>
         <div class="maps"></div>
@@ -202,26 +257,113 @@
     </div>
   </div>
 </template>
+
+
+
+
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      email: "",
+      name: "",
+      message: "",
+      homeslider: [
+        '/images/about-mic-2.jpg',
+        '/images/about-mic-3.jpg',
+        '/images/about-mic-4.jpg',
+      ],
+      
+      slickOptions: {
+        dots: false,
+        dotsClass: "slick-dots custom-dot-class",
+        infinite: true,
+        speed: 1000,
+        draggable: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true
+        // Any other options that can be got from plugin documentation
+      },
+    };
+  },
+  methods: {
+    sendEmail: function() {
+      var payload = {
+        name: this.name,
+        email: this.email,
+        message: this.message
+      };
+
+      axios({
+        method: "POST",
+        url: "http://127.0.0.1:8000/backend/api/products/sendEmailMicMellows",
+        data: payload,
+        contentType: "application/json"
+      })
+        .then(res => {
+          this.name = "";
+          this.email = "";
+          this.phone_number = "";
+          // this.email_success = true;
+          alert("Query Successfully Sent");
+        })
+        .catch(error => {
+          console.log(error);
+          // this.email_success = false;
+          alert("Error on Query Submission");
+        });
+    }
+  }
+};
+</script>
+
+
+
+
 <style scoped lang='scss'>
+
+.header{
+  position :relative
+}
+
+
+
+
+.header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.72);
+}
+
 button {
   height: 4rem;
   width: 12rem;
   border: 2px solid #f26101;
   border-radius: 8px;
-  color: white;
+  color: #f26101;
 }
 
 .join-now {
-  background-image: url(/images/web_cover.jpg);
+  // background-image: url(/images/web_cover.jpg);
   background-position: center;
   min-height: 720px;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 80px;
 
   &-contents {
-    width: 50%;
+    width: 100%;
     height: 50%;
-    overflow: auto;
+    overflow: initial;
     margin: auto;
     position: absolute;
     top: 0;
@@ -236,7 +378,7 @@ button {
 
     p {
       font-size: 1.8rem;
-      color: white;
+      color: #fff;
       line-height: 1.5;
     }
   }
@@ -246,28 +388,25 @@ button {
   .join-now {
     min-height: 720px;
 
-    &-contents {
-      width: 50%;
-      height: 50%;
-      overflow: auto;
-      margin: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
+  }
+}
 
-      h2 {
-        color: #f8650c;
-        font-size: 4rem;
-        font-weight: 600;
-      }
+  .carousel-text{
+    padding-top: 80px;
+  }
 
-      p {
-        font-size: 1.8rem;
-        color: white;
-        line-height: 1.5;
-      }
-    }
+@media (max-width: 768px) {
+  .carousel-text{
+    padding-left: 170px;
+    padding-right: 151px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-text{
+     padding-top: 0;
+    padding-left: 30px;
+    padding-right: 20px;
   }
 }
 
@@ -288,11 +427,11 @@ button {
   }
 
   img {
-    border-radius:8px;
+    border-radius: 8px;
   }
 
   &-cards {
-    height: 22.5rem;
+    height: 400px;
     // width: 21.8rem;
     background-color: white;
     border-radius: 8px;
@@ -342,6 +481,26 @@ button {
   }
 }
 
+
+
+@media (max-width: 1280px) {
+  .first-part {
+    &-cards {
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .first-part {  
+    &-cards {
+      height:220px;
+      // width: 21.8rem;
+    }
+  }
+}
+
+
 .second-part {
   background-image: linear-gradient(#cd1e01 60%, #f8650c 40%);
   h1 {
@@ -355,7 +514,7 @@ button {
     height: 435px;
     position: relative;
 
-    img{
+    img {
       border-radius: 8px;
     }
   }
@@ -431,7 +590,7 @@ button {
   }
 
   button {
-    width: 18rem;
+    width: 100%;
     height: 4.3rem;
     color: white;
     background-color: #730202;
@@ -479,18 +638,18 @@ button {
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
-  opacity: 0.6; /* Firefox */
+  opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: white;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: white;
-  opacity: 0.6;
+  opacity: 1;
 }
 </style>

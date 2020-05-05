@@ -1,25 +1,27 @@
 <template>
-  <div class="nav-header transparent fixed border-b">
-    <div class="container h-100">
+  <div class="nav-header transparent fixed">
+    <div class="container h-100 mx-10 lg:mx-auto">
       <div
         class="nav-icon w-100"
         style="display:flex; justify-content: space-between;align-items:center"
       >
         <nuxt-link to="/" style="display:flex; align-items: center">
           <svg
-              class="w-10 h-10 text-white"
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>TailwindCSS</title>
-              <path
-                fill="currentColor"
-                d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-              />
-            </svg>
-          <h6 style="margin-bottom: 0; font-family: 'bold'; font-size: 30px; margin-left: 10px">Micmellows</h6>
+            class="w-10 h-10 text-red-500"
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>TailwindCSS</title>
+            <path
+              fill="currentColor"
+              d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
+            />
+          </svg>
+          <h6
+            style="margin-bottom: 0; font-family: 'bold'; font-size: 30px; margin-left: 10px"
+          >Micmellows</h6>
         </nuxt-link>
         <div class="nav-link hide-on-med-and-down">
           <nuxt-link
@@ -60,7 +62,59 @@
           class="show-on-medium-and-down hide-on-large-only menu"
           style="align-items: center;"
         >
-          <img src="~static/menu.svg" style="height:20px" />
+          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+          <svg
+            class="menu-svg"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 512 512"
+            style="enable-background:new 0 0 512 512;height: 20px"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <path fill="white"
+                  d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636
+			c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path fill="white"
+                  d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636
+			c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path fill="white"
+                  d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636
+			c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"
+                />
+              </g>
+            </g>
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+            <g />
+          </svg>
         </div>
       </div>
 
@@ -82,11 +136,9 @@
 
 
 <style scoped>
-
-.border-b{
+.border-b {
   border-color: #ffffff59;
 }
-
 
 .nav-header {
   background-color: white;
@@ -107,14 +159,20 @@
 
 .nav-header.darkHeader {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.07);
-  background-color: #cd1e01!important;
+  background-color: #cd1e01 !important;
+}
+
+.nav-header.darkHeader a,
+.nav-header.darkHeader svg {
+  color: white!important;
+}
+.nav-header.darkHeader .menu-svg {
+  fill: white;
 }
 
 .nav-header.white {
-  background-color: #fff !important;
+  background-color: #fff;
 }
-
-
 
 .nav-header.white a {
   color: black;
@@ -125,7 +183,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9;
+  z-index: 9999;
 }
 
 .nav-icon {
@@ -133,7 +191,7 @@
 }
 
 .nav-header a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -153,11 +211,11 @@
 }
 
 .nav-link a:hover {
-  color: #fff;
+  color: #f8650c;
 }
 .nav-link a:after {
   content: "";
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #f8650c;
   position: absolute;
   width: 10px;
   bottom: 0;
@@ -281,8 +339,8 @@ export default {
 
   methods: {
     goTo(a) {
-      this.$scrollTo(a , {
-          offset: -100,
+      this.$scrollTo(a, {
+        offset: -100
       });
       this.closeMenu();
     },
