@@ -6,19 +6,7 @@
         style="display:flex; justify-content: space-between;align-items:center"
       >
         <nuxt-link to="/" style="display:flex; align-items: center">
-          <svg
-            class="w-10 h-10 text-red-500"
-            width="54"
-            height="54"
-            viewBox="0 0 54 54"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>TailwindCSS</title>
-            <path
-              fill="currentColor"
-              d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-            />
-          </svg>
+          <img src="/icon.png" style="height:100%;width:50px">
           <h6
             style="margin-bottom: 0; font-family: 'bold'; font-size: 30px; margin-left: 10px"
           >Micmellows</h6>
@@ -35,19 +23,19 @@
           <nuxt-link
             class="link"
             v-scroll-to="{
-                el: '.articles',
+                el: '.courses',
                 duration: 1000,
             }"
             to="/"
-          >Articles</nuxt-link>
+          >Courses</nuxt-link>
           <nuxt-link
             class="link"
             v-scroll-to="{
-                el: '.training',
+                el: '.events',
                 duration: 1000,
             }"
             to="/"
-          >Training</nuxt-link>
+          >Events</nuxt-link>
           <nuxt-link
             v-scroll-to="{
                 el: '.about',
@@ -56,6 +44,14 @@
             class="link"
             to="/"
           >About Us</nuxt-link>
+          <nuxt-link
+            v-scroll-to="{
+                el: '.contact',
+                duration: 1000,
+            }"
+            class="link"
+            to="/"
+          >Contact Us</nuxt-link>
         </div>
         <div
           @click="showMenu"
@@ -121,9 +117,10 @@
       <div class="mobile-nav opacity-hide">
         <div class="nav">
           <div class="link" @click="goTo('html')" to="/">Home</div>
-          <div class="link" @click="goTo('.offers')" to="/services">Offers</div>
-          <div class="link" @click="goTo('.all_products')" to="/ourwork">Products</div>
+          <div class="link" @click="goTo('.courses')" to="/services">Courses</div>
+          <div class="link" @click="goTo('.events')" to="/ourwork">Events</div>
           <div class="link" @click="goTo('.about')" to="/">About Us</div>
+          <div class="link" @click="goTo('.contact')" to="/">Contact Us</div>
         </div>
         <div @click="closeMenu" class="show-on-medium-and-down hamburger">
           <img src="~static/close.svg" style="height:20px" />
@@ -159,7 +156,7 @@
 
 .nav-header.darkHeader {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.07);
-  background-color: #cd1e01 !important;
+  background-color: #f8650c !important;
 }
 
 .nav-header.darkHeader a,

@@ -25,15 +25,20 @@
               </div>
     </div>
     <client-only>
-      <slick class="homepageSlider" ref="carousel" :options="slickOptions">
-        <div v-for="p in homeslider" :key="p.id">
-          <img
-            class="d-block w-100 img1"
-            :src="p"
-            alt="First slide"
-          />
-        </div>
-      </slick>
+
+
+      <carousel class="homepageSlider" :per-page="1":mouse-drag="false" :autoplay="true" :loop="true" :autoplayTimeout="5000">
+        <slide v-for="p in homeslider" :key="p.id">
+        <img
+                class="d-block w-full h-full object-cover img1"
+                :src="p"
+                alt="First slide"
+              />
+        </slide>
+      </carousel>
+
+
+    
     </client-only>
  </div>
 
@@ -62,7 +67,7 @@
             </div>
           </div>
         </div>
-        <div class="px-0 pb-32">
+        <div class="px-0 pb-32 courses">
           <h1 class="text-center md:pb-20">Featured Courses</h1>
           <div class="flex flex-wrap justify-between">
             <div class="w-full lg:w-1/3 p-10 lg:pr-4">
@@ -129,7 +134,7 @@
         </div>
       </div>
     </div>
-    <div class="second-part">
+    <div class="second-part events">
       <div class="container pb-40">
         <h1 class="text-center pt-24 pb-20">Our Events</h1>
 
@@ -395,9 +400,10 @@ button {
     padding-top: 80px;
   }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .carousel-text{
-    padding-left: 170px;
+    padding-top: 0;
+    padding-left: 40px;
     padding-right: 151px;
   }
 }
@@ -635,20 +641,33 @@ button {
   }
 }
 
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 1; /* Firefox */
+/* do not group these rules */
+*::-webkit-input-placeholder {
+ color: white;
+  opacity: 1;
 }
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
+*:-moz-placeholder {
+    /* FF 4-18 */
   color: white;
   opacity: 1;
 }
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
+*::-moz-placeholder {
+    /* FF 19+ */
+   color: white;
+  opacity: 1;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white;
+  opacity: 1;
+}
+*::-ms-input-placeholder {
+    /* Microsoft Edge */
+   color: white;
+  opacity: 1;
+}
+*::placeholder {
+    /* modern browser */
   color: white;
   opacity: 1;
 }
