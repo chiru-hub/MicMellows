@@ -179,7 +179,7 @@
       <div class="container px-1 py-1 sm:py-10 sm:px-10 lg:py-40 lg:px-40">
         <div>
           <h1 class="text-center">About MicMellows</h1>
-          <img class="m-auto" src="/images/about.png" alt />
+          <img class="m-auto" src="/images/about-mic-2.jpg" alt />
         </div>
         <p
           class="w-4/5 text-center"
@@ -212,7 +212,7 @@ button {
 }
 
 .join-now {
-  background-image: url(/images/microphone.png);
+  background-image: url(/images/web_cover.jpg);
   background-position: center;
   min-height: 720px;
   background-repeat: no-repeat;
@@ -287,6 +287,10 @@ button {
     opacity: 0.7;
   }
 
+  img {
+    border-radius:8px;
+  }
+
   &-cards {
     height: 22.5rem;
     // width: 21.8rem;
@@ -349,15 +353,27 @@ button {
   &-cards2 {
     width: 339px;
     height: 435px;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: -12px 12px 30px 0 rgba(199, 93, 23, 0.16);
+    position: relative;
+
+    img{
+      border-radius: 8px;
+    }
+  }
+  &-cards2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(4, 4, 4, 0) 22%,
       #111111
     );
+    box-shadow: -12px 12px 30px 0 rgba(199, 93, 23, 0.16);
+    border-radius: 8px;
   }
 }
 
@@ -411,6 +427,7 @@ button {
     text-align: center;
     line-height: 30px;
     margin: auto;
+    margin-top: 2rem;
   }
 
   button {
