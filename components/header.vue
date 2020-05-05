@@ -3,7 +3,7 @@
     <nav class="shadow absolute md:w-full" role="navigation">
       <div class="container mx-auto py-8 flex flex-wrap items-center md:flex-no-wrap">
         <div class="mr-4 md:mr-8">
-          <a href="#" rel="home">
+          <a href="#" rel="home" class="site-logo">
             <svg
               class="w-10 h-10 text-purple-600"
               width="54"
@@ -32,11 +32,15 @@
             class="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:border-0"
           >
             <li>
-              <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Micmellows</a>
+              <a
+                class="block px-4 py-1 md:p-2 lg:px-4 clearfix site-name"
+                href="#"
+                title="Link"
+              >Micmellows</a>
             </li>
           </ul>
           <ul
-            class="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0"
+            class="nav flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0"
           >
             <li>
               <a class="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Articles</a>
@@ -61,15 +65,17 @@
   </div>
 </template>
 <style lang="scss" scoped>
-nav {
-  a:first-child {
-    color: white;
-    font-size: 3rem;
-    font-weight: 600;
-  }
+.nav {
   a {
     color: white;
-    font-size: 2.5rem;
+    font-size: 18px;
+    margin: 0 10px;
   }
+}
+
+.site-name {
+  font-size: 18px;
+   color: white;
+  font-weight: bold;
 }
 </style>
