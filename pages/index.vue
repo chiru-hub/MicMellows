@@ -47,7 +47,7 @@
         <div class="p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
-            class="text-left md:w-3/5 mt-10 mx-auto"
+            class="text-center md:w-3/5 mt-10 mx-auto"
           >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
         </div>
         <div class="px-0 pb-40 pt-20 flex w-full flex-wrap">
