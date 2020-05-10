@@ -210,11 +210,12 @@
             <div class="justify-center third-part-cards">
               <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
               <div class="cards-content w-10/12 text-center w-full px-5">
-                <h4>Dr. Catherine M. Cain</h4>
-                <p>Ph. D., CRC, LPCC-S</p>
-                <p
+                <h4>Rita Harlalka</h4>
+                <p>MBA HR</p>
+                <p style="min-height:8.4rem"
                   class="mt-10"
-                >This course is a “must have” for anyone seeking increased personal empowerment, and I highly recommend it to all seeking personal growth.</p>
+                >MBA HR, Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
+A passionate thinker,writer, story teller and Speaker.</p>
               </div>
             </div>
           </div>
@@ -224,9 +225,9 @@
               <div class="cards-content w-10/12 text-center w-full px-5">
                 <h4>Dr. Saumendu</h4>
                 <p>Ph. D., CRC, LPCC-S</p>
-                <p
+                <p style="min-height:8.4rem"
                   class="mt-10"
-                >"Children are budding flowers of humanity. Let them learn for the love of learning, explore for the sake of finding their own path. Let our flowers bloom, bloom brightly."</p>
+                >Dr. Saumendu Bhattacharjee, MD ( Pediatrics)...an experienced doctor, mentor, writer, speaker, speech coach. Past District Champion of International Speech Contest, 2019, in Toastmasters International.</p>
               </div>
             </div>
           </div>
