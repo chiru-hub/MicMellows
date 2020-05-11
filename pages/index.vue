@@ -223,11 +223,11 @@ A passionate thinker,writer, story teller and Speaker.</p>
             <div class="justify-center third-part-cards">
               <img class="w-full h-full object-cover" src="/images/wts2.jpg" alt />
               <div class="cards-content w-10/12 text-center w-full px-5">
-                <h4>Dr. Saumendu</h4>
-                <p>Ph. D., CRC, LPCC-S</p>
+                <h4>Dr. Saumendu Bhattacharjee</h4>
+                <p>MD ( Pediatrics)</p>
                 <p style="min-height:8.4rem"
                   class="mt-10"
-                >Dr. Saumendu Bhattacharjee, MD ( Pediatrics)...an experienced doctor, mentor, writer, speaker, speech coach. Past District Champion of International Speech Contest, 2019, in Toastmasters International.</p>
+                >An experienced doctor, mentor, writer, speaker, speech coach. Past District Champion of International Speech Contest, 2019, in Toastmasters International.</p>
               </div>
             </div>
           </div>
@@ -242,7 +242,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
         </div>
         <p
           class="w-4/5 text-center"
-        >Micmellows is a professional Public Speaking and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing. Micmellows gives exposure and a platform to individuals to develop their personality and and gain an edge over others in their field.</p>
+        >Micmellows is a professional Public Speaking and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing. Micmellows gives exposure and a platform to individuals to develop their personality and gain an edge over others in their field.</p>
         <h1 class="text-center my-24">Get in Touch</h1>
         <div class="form contact px-5 pb-10">
           <div>
