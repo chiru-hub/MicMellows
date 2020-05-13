@@ -211,10 +211,10 @@
               <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
               <div class="cards-content w-10/12 text-center w-full px-5">
                 <h4>Rita Harlalka</h4>
-                <p>MBA HR</p>
+                <p>MBA in HR</p>
                 <p style="min-height:8.4rem"
                   class="mt-10"
-                >MBA HR, Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
+                >Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
 A passionate thinker,writer, story teller and Speaker.</p>
               </div>
             </div>
