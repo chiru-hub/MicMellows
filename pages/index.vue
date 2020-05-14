@@ -67,9 +67,9 @@
             </div>
           </div>
         </div> -->
-        <div class="container md:p-12">
+        <div class="container pt-10 md:p-12">
         <h1 class="text-center">What they are Saying?</h1>
-        <div class="flex flex-wrap w-full pt-20 justify-around">
+        <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
           <div class="w-full lg:w-1/2 p-10 lg:pr-10">
             <div class="justify-center third-part-cards">
               <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
@@ -98,7 +98,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
         </div>
       </div>
         <div class="px-0 pb-32 courses">
-          <h1 class="text-center md:pb-20">Featured Courses</h1>
+          <h1 class="text-center py-10">Featured Courses</h1>
           <div class="flex flex-wrap justify-between">
             <div class="w-full lg:w-1/3 p-10 lg:pr-4">
               <div class="first-part-cards2">
@@ -166,7 +166,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
     </div>
     <div class="second-part events">
       <div class="container pb-40">
-        <h1 class="text-center pt-24 pb-20">Our Events</h1>
+        <h1 class="text-center pt-10">Our Events</h1>
 
         <div class="flex flex-wrap justify-between">
           <div class="w-full lg:w-1/3 p-10 lg:pr-4">
@@ -288,9 +288,9 @@ A passionate thinker,writer, story teller and Speaker.</p>
       </div>
     </div>
     <div class="fourth-part about">
-      <div class="container px-1 py-1 sm:py-10 sm:px-10 lg:py-40 lg:px-40">
+      <div class="container">
         <div>
-          <h1 class="text-center">About MicMellows</h1>
+          <h1 class="text-center py-10">About MicMellows</h1>
           <img class="m-auto" src="/images/about-mic-2.jpg" alt />
         </div>
         <p
@@ -636,10 +636,10 @@ button {
 @media (max-width: 600px) {
   .third-part-cards {
 
-    height: 40.5rem;
+    height: 469px;
 
     img {
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 }
@@ -663,7 +663,7 @@ button {
 
   button {
     width: 100%;
-    height: 4.3rem;
+    height: 60px;
     color: white;
     background-color: #730202;
     border-radius: 8px;
@@ -676,6 +676,7 @@ button {
     border-radius: 8px;
     padding: 0.9rem;
     color: white;
+    height: 60px;
     width: 100%;
     outline: none;
   }
