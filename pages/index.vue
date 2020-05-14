@@ -52,17 +52,17 @@
         </div>
         <div class="px-0 pb-40 pt-20 flex w-full flex-wrap">
           <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:pr-4">
-            <div class="first-part-cards">
+            <div class="">
               <img src="/images/MIC_4_M2-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
-          <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:px-2">
-            <div class="first-part-cards">
+          <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:px-4">
+            <div class="">
               <img src="/images/MIC_5.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
           <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:pl-4">
-            <div class="first-part-cards">
+            <div class="">
               <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
@@ -493,7 +493,8 @@ button {
 @media (max-width: 1280px) {
   .first-part {
     &-cards {
-      height: 300px;
+      height: 500px;
+      max-width: 600px;
     }
   }
 }
@@ -501,7 +502,7 @@ button {
 @media (max-width: 1280px) {
   .first-part {  
     &-cards {
-      height:220px;
+      height:560px;
       // width: 21.8rem;
     }
   }
