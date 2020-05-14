@@ -42,9 +42,9 @@
     </client-only>
  </div>
 
-    <div class="first-part">
+    <div class="first-part third-part">
       <div class="container px-5">
-        <div class="p-12">
+        <!-- <div class="p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
             class="text-center md:w-3/5 mt-10 mx-auto"
@@ -66,7 +66,37 @@
               <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
+        </div> -->
+        <div class="container md:p-12">
+        <h1 class="text-center">What they are Saying?</h1>
+        <div class="flex flex-wrap w-full pt-20 justify-around">
+          <div class="w-full lg:w-1/2 p-10 lg:pr-10">
+            <div class="justify-center third-part-cards">
+              <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
+              <div class="cards-content w-10/12 text-center w-full px-5">
+                <h4>Rita Harlalka</h4>
+                <p>MBA in HR</p>
+                <p style="min-height:8.4rem"
+                  class="mt-10"
+                >Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
+A passionate thinker,writer, story teller and Speaker.</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 p-10 lg:pl-10">
+            <div class="justify-center third-part-cards">
+              <img class="w-full h-full object-cover" src="/images/wts2.jpg" alt />
+              <div class="cards-content w-10/12 text-center w-full px-5">
+                <h4>Dr. Saumendu Bhattacharjee</h4>
+                <p>MD ( Pediatrics)</p>
+                <p style="min-height:8.4rem"
+                  class="mt-10"
+                >An experienced doctor, mentor, writer, speaker, speech coach. Past District Champion of International Speech Contest, 2019, in Toastmasters International.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
         <div class="px-0 pb-32 courses">
           <h1 class="text-center md:pb-20">Featured Courses</h1>
           <div class="flex flex-wrap justify-between">
@@ -202,9 +232,9 @@
         </div>
       </div>
     </div>
-    <div class="third-part">
-      <div class="container px-0 py-40">
-        <h1 class="text-center">What they are Saying?</h1>
+    <div class="third-part first-part" style="background-image: linear-gradient(#cd1e01 61%, #f8650c 30%);">
+      <div class="container px-5">
+        <!-- <h1 class="text-center">What they are Saying?</h1>
         <div class="flex flex-wrap w-full pt-20 justify-around">
           <div class="w-full lg:w-1/2 p-10 lg:pr-10">
             <div class="justify-center third-part-cards">
@@ -229,6 +259,29 @@ A passionate thinker,writer, story teller and Speaker.</p>
                   class="mt-10"
                 >An experienced doctor, mentor, writer, speaker, speech coach. Past District Champion of International Speech Contest, 2019, in Toastmasters International.</p>
               </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="p-12">
+          <h1 class="text-center">Why MicMellows?</h1>
+          <p
+            class="text-center md:w-3/5 mt-10 mx-auto"
+          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
+        </div>
+        <div class="px-0 pb-20 pt-20 flex w-full flex-wrap">
+          <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pr-4">
+            <div class="">
+              <img src="/images/MIC_4_M2-01_new.jpeg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <!-- <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:px-4">
+            <div class="">
+              <img src="/images/MIC_5.jpg" class="w-full h-full object-cover" />
+            </div>
+          </div> -->
+          <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pl-4">
+            <div class="">
+              <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -545,7 +598,7 @@ button {
 }
 
 .third-part {
-  background-image: linear-gradient(#cd1e01 50%, #f8650c 50%);
+  background-image: linear-gradient(#cd1e01 53%, #f8650c 50%);
 
   h1 {
     color: white;
@@ -577,6 +630,17 @@ button {
     );
     box-shadow: -12px 12px 30px 0 rgba(199, 93, 23, 0.16);
     border-radius: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .third-part-cards {
+
+    height: 40.5rem;
+
+    img {
+      object-fit: contain;
+    }
   }
 }
 
