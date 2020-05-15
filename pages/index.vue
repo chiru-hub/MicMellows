@@ -14,7 +14,7 @@
         <div class="join-now-contents w-full">
         <div class="container carousel-text">
                 <h2 class="text-left">Unfold Dreams Within</h2>
-                <p>Micmellows is a professional Public Speaking and Personality </p>
+                <p>Micmellows is a professional Public Speaking, Goal Setting and Personality </p>
                 <p>Development Institute with a vision to ensure every individual identify </p>
                 <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
                 <button class="mt-16"  v-scroll-to="{
@@ -68,7 +68,10 @@
           </div>
         </div> -->
         <div class="container pt-10 md:p-12">
-        <h1 class="text-center">What they are Saying?</h1>
+          <h1 class="text-center">Why MicMellows?</h1>
+          <p
+            class="text-center md:w-3/5 mt-10 mx-auto"
+          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>  
         <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
           <div class="w-full lg:w-1/2 p-10 lg:pr-10">
             <div class="justify-center third-part-cards">
@@ -262,16 +265,17 @@ A passionate thinker,writer, story teller and Speaker.</p>
             </div>
           </div>
         </div> -->
-        <div class="p-12">
+        <!-- <div class="p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
             class="text-center md:w-3/5 mt-10 mx-auto"
           >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
-        </div>
+        </div> -->
+        <h1 class="text-center pt-20">What they are Saying?</h1>
         <div class="px-0 pb-20 pt-20 flex w-full flex-wrap">
           <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pr-4">
             <div class="">
-              <img src="/images/MIC_4_M2-01_new.jpeg" class="w-full h-full object-cover" />
+              <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
           <!-- <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:px-4">
@@ -281,7 +285,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
           </div> -->
           <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pl-4">
             <div class="">
-              <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
+              <img src="/images/MIC_4_M2-01_new.jpeg" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -295,7 +299,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
         </div>
         <p
           class="w-4/5 text-center"
-        >Micmellows is a professional Public Speaking and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing. Micmellows gives exposure and a platform to individuals to develop their personality and gain an edge over others in their field.</p>
+        >Micmellows is a professional Public Speaking, Goal Setting and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing. Micmellows gives exposure and a platform to individuals to develop their personality and gain an edge over others in their field.</p>
         <h1 class="text-center my-24">Get in Touch</h1>
         <div class="form contact px-5 pb-10">
           <div>
