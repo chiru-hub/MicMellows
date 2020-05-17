@@ -12,14 +12,12 @@
     <div class="header">
       <div style="position:absolute;z-index:99;left:0;right:0;margin:auto;top:0;bottom:0;">
         <div class="join-now-contents w-full">
-          <div class="my-container  carousel-text">
-            <h2 class="text-left">Unfold Dreams Within</h2>
-            <p>Micmellows is a professional Public Speaking and Personality</p>
-            <p>Development Institute with a vision to ensure every individual identify</p>
-            <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
-            <button
-              class="mt-16"
-              v-scroll-to="{
+        <div class="my-container carousel-text">
+                <h2 class="text-left">Unfold Dreams Within</h2>
+                <p>Micmellows is a professional Public Speaking, Goal Setting and Personality </p>
+                <p>Development Institute with a vision to ensure every individual identify </p>
+                <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
+                <button class="mt-16"  v-scroll-to="{
                 el: '.contact',
                 duration: 1000,
             }"
@@ -67,22 +65,25 @@
               <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
-        </div>-->
-        <div class="my-container  pt-10 md:p-12">
-          <h1 class="text-center">What they are Saying?</h1>
-          <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
-            <div class="w-full lg:w-1/2 p-10 lg:pr-10">
-              <div class="justify-center third-part-cards">
-                <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
-                <div class="cards-content w-10/12 text-center w-full px-5">
-                  <h4>Rita Harlalka</h4>
-                  <p>MBA in HR</p>
-                  <p style="min-height:8.4rem" class="mt-10">
-                    Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
-                    A passionate thinker,writer, story teller and Speaker.
-                  </p>
-                </div>
+        </div> -->
+        <div class="container pt-10 md:p-12">
+          <h1 class="text-center">Why MicMellows?</h1>
+          <p
+            class="text-center md:w-3/5 mt-10 mx-auto"
+          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>  
+        <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
+          <div class="w-full lg:w-1/2 p-10 lg:pr-10">
+            <div class="justify-center third-part-cards">
+              <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
+              <div class="cards-content w-10/12 text-center w-full px-5">
+                <h4>Rita Harlalka</h4>
+                <p>MBA in HR</p>
+                <p style="min-height:8.4rem"
+                  class="mt-10"
+                >Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
+                A passionate thinker,writer, story teller and Speaker.</p>
               </div>
+            </div>
             </div>
             <div class="w-full lg:w-1/2 p-10 lg:pl-10">
               <div class="justify-center third-part-cards">
@@ -284,17 +285,18 @@ A passionate thinker,writer, story teller and Speaker.</p>
               </div>
             </div>
           </div>
-        </div>-->
-        <div class="p-12">
+        </div> -->
+        <!-- <div class="p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
             class="text-center md:w-3/5 mt-10 mx-auto"
           >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
-        </div>
+        </div> -->
+        <h1 class="text-center pt-20">What they are Saying?</h1>
         <div class="px-0 pb-20 pt-20 flex w-full flex-wrap">
           <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pr-4">
-            <div class>
-              <img src="/images/MIC_4_M2-01_new.jpeg" class="w-full h-full object-cover" />
+            <div class="">
+              <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
           <!-- <div class="w-full md:w-1/3 lg:w-1/3 p-5 lg:px-4">
@@ -303,8 +305,8 @@ A passionate thinker,writer, story teller and Speaker.</p>
             </div>
           </div>-->
           <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pl-4">
-            <div class>
-              <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
+            <div class="">
+              <img src="/images/MIC_4_M2-01_new.jpeg" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -318,7 +320,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
 
     -->
 
-    <div class="blog" style="background-color: #cd1e01">
+    <div class="blog" v-if="showTime" style="background-color: #cd1e01">
       <div class="my-container  px-5">
         <div class="p-12">
           <h1 class="text-center">Blogs</h1>
@@ -360,7 +362,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
         </div>
         <p
           class="w-4/5 text-center"
-        >Micmellows is a professional Public Speaking and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing. Micmellows gives exposure and a platform to individuals to develop their personality and gain an edge over others in their field.</p>
+        >Micmellows is a professional Public Speaking, Goal Setting and Personality Development Institute with a vision to ensure every individual identify and unleash their dreams through the power of listening, thinking and expressing. Micmellows gives exposure and a platform to individuals to develop their personality and gain an edge over others in their field.</p>
         <h1 class="text-center my-24">Get in Touch</h1>
         <div class="form contact px-5 pb-10">
           <div>
@@ -380,6 +382,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 
@@ -394,6 +397,7 @@ export default {
       email: "",
       name: "",
       message: "",
+      showTime: false,
       homeslider: [
         "/images/about-mic-2.jpg",
         "/images/about-mic-3.jpg",
@@ -419,6 +423,20 @@ export default {
   },
   beforeMount() {
     this.blog_post = this.$store.state.blog_post;
+
+
+    console.log(new Date())
+
+
+
+    if( new Date().getTime() >= new Date('2020/05/18 00:24:00').getTime()){
+
+        this.showTime = true
+
+    }
+
+
+
   },
   methods: {
     sendEmail: function() {

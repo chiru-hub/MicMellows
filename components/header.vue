@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="shadow absolute md:w-full" role="navigation">
-      <div class="container mx-auto py-8 flex flex-wrap items-center md:flex-no-wrap">
+      <div class="my-container mx-auto py-8 flex flex-wrap items-center md:flex-no-wrap">
         <div class="mr-4 md:mr-8">
           <a href="#" rel="home" class="site-logo">
             <svg
