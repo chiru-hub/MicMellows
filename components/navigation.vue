@@ -39,7 +39,7 @@
           <nuxt-link
             class="link"
             v-scroll-to="{
-                el: '.blogs',
+                el: '.blog',
                 duration: 1000,
             }"
             to="/"
@@ -130,7 +130,7 @@
           <div class="link" @click="goTo('html')" to="/">Home</div>
           <div class="link" @click="goTo('.courses')" to="/services">Courses</div>
           <div class="link" @click="goTo('.events')" to="/ourwork">Events</div>
-          <div class="link" @click="goTo('.blogs')" to="/">Blogs</div>
+          <div class="link" @click="goTo('.blog')" to="/">Blogs</div>
           <div class="link" @click="goTo('.about')" to="/">About Us</div>
           <div class="link" @click="goTo('.contact')" to="/">Contact Us</div>
         </div>

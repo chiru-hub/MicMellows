@@ -14,7 +14,7 @@ export default {
             { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
             {
                 rel: "stylesheet",
-                href: "/css/framework.css"
+                href: "/css/framework.css?v=1"
             }
         ],
         script: [
@@ -48,42 +48,8 @@ export default {
     buildModules: [
         // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
         '@nuxtjs/tailwindcss',
-        'nuxt-purgecss',
+        // 'nuxt-purgecss',
     ],
-
-//  purgeCSS: {
-//         // your settings here
-
-//         // mode: MODES.webpack,
-//         enabled: ({ isDev, isClient }) => (!isDev && isClient), // or `false` when in dev/debug mode
-//         paths: [
-//             'components/**/*.vue',
-//             'layouts/**/*.vue',
-//             'pages/**/*.vue',
-//             'plugins/**/*.js'
-//         ],
-//         styleExtensions: ['.css'],
-//         whitelist: ['nav--shadowed'],
-//         whitelistPatterns: [/^v-lazy-*/, /^slick-*/, /-(leave|enter|appear)(|-(to|from|active))$/, /^(?!(|.*?:)cursor-move).-move$/, /^router-link(|-exact)-active$/],
-//         whitelistPatternsChildren: [/^v-lazy-*/, /^slick-*/],
-//         extractors: [{
-//             extractor: class {
-//                 static extract(content) {
-//                     return content.match(/[A-z0-9-:\\/]+/g)
-//                 }
-//             },
-//             extensions: ['html', 'vue', 'js']
-//         }]
-
-//     },
-//     tailwindcss: {
-//         configPath: '~/config/tailwind.config.js',
-//         cssPath: '~/assets/css/tailwind.css',
-//         purgeCSSInDev: false,
-//         exposeConfig: false
-//     },
-
-
 
     /*
      ** Nuxt.js modules
@@ -98,7 +64,12 @@ export default {
         /*
          ** You can extend webpack config here
          */
-        transpile: ['vue-slick'],     
+        transpile: ['vue-slick'],
         extend(config, ctx) {}
+    },
+    generate: {
+        routes: [
+            '/blog/why-hospitals-are-safer-than-bazaars-in-this-pandemic-an-analogy-from-a-speakers-perspective',
+        ]
     }
 }

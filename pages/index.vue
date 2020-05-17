@@ -382,7 +382,6 @@ A passionate thinker,writer, story teller and Speaker.</p>
       </div>
     </div>
   </div>
-  </div>
 </template>
 
 
@@ -421,7 +420,7 @@ export default {
       }
     };
   },
-  beforeMount() {
+  mounted() {
     this.blog_post = this.$store.state.blog_post;
 
 
@@ -429,12 +428,13 @@ export default {
 
 
 
-    if( new Date().getTime() >= new Date('2020/05/18 00:24:00').getTime()){
-
-        this.showTime = true
+    if( new Date().getTime() >= new Date('2020/05/18 08:00:00').getTime()){
+      
+      this.showTime = true
 
     }
 
+      console.log(new Date())
 
 
   },
