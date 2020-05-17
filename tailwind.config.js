@@ -9,14 +9,6 @@ module.exports = {
     variants: {},
     plugins: [],
     purge: {
-        content: [
-            './src/**/*.vue',
-            // other content types mentioned above
-        ],
-        options: {
-            whitelist: ['dark-header', 'other-class'],
-            whitelistPatterns: [/^fa-/, /^svg-inline--fa/],
-            whitelistPatternsChildren: [/^token/, /^pre/, /^code/],
-        }
+        enabled: false
     }
 }
