@@ -6,7 +6,7 @@
         style="display:flex; justify-content: space-between;align-items:center"
       >
         <nuxt-link to="/" style="display:flex; align-items: center">
-          <img src="/icon.png" style="height:100%;width:50px">
+          <img src="/icon.png" style="height:100%;width:50px" />
           <h6
             style="margin-bottom: 0; font-family: 'bold'; font-size: 30px; margin-left: 10px"
           >Micmellows</h6>
@@ -36,6 +36,14 @@
             }"
             to="/"
           >Events</nuxt-link>
+          <nuxt-link
+            class="link"
+            v-scroll-to="{
+                el: '.blogs',
+                duration: 1000,
+            }"
+            to="/"
+          >Blogs</nuxt-link>
           <nuxt-link
             v-scroll-to="{
                 el: '.about',
@@ -73,7 +81,8 @@
           >
             <g>
               <g>
-                <path fill="white"
+                <path
+                  fill="white"
                   d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636
 			c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"
                 />
@@ -81,7 +90,8 @@
             </g>
             <g>
               <g>
-                <path fill="white"
+                <path
+                  fill="white"
                   d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636
 			c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"
                 />
@@ -89,7 +99,8 @@
             </g>
             <g>
               <g>
-                <path fill="white"
+                <path
+                  fill="white"
                   d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636
 			c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"
                 />
@@ -119,6 +130,7 @@
           <div class="link" @click="goTo('html')" to="/">Home</div>
           <div class="link" @click="goTo('.courses')" to="/services">Courses</div>
           <div class="link" @click="goTo('.events')" to="/ourwork">Events</div>
+          <div class="link" @click="goTo('.blogs')" to="/">Blogs</div>
           <div class="link" @click="goTo('.about')" to="/">About Us</div>
           <div class="link" @click="goTo('.contact')" to="/">Contact Us</div>
         </div>
@@ -161,7 +173,7 @@
 
 .nav-header.darkHeader a,
 .nav-header.darkHeader svg {
-  color: white!important;
+  color: white !important;
 }
 .nav-header.darkHeader .menu-svg {
   fill: white;
@@ -307,6 +319,7 @@ export default {
   },
 
   mounted() {
+    var that = this;
     var lastScrollTop = 0;
     $(window).scroll(function(event) {
       var st = $(this).scrollTop();
@@ -322,14 +335,18 @@ export default {
     $(window).scroll(function() {
       var scroll = $(window).scrollTop();
 
-      //>=, not <=
-      if (scroll <= 0) {
-        //clearHeader, not clearheader - caps H
-        $(".nav-header").removeClass("darkHeader");
-        $("#moveup").removeClass("show");
-      } else if (scroll > 0) {
-        $(".nav-header").addClass("darkHeader");
-        $("#moveup").addClass("show");
+      if ($nuxt.$route.name == "index") {
+        //>=, not <=
+        if (scroll <= 0) {
+          //clearHeader, not clearheader - caps H
+          $(".nav-header").removeClass("darkHeader");
+          $("#moveup").removeClass("show");
+        } else if (scroll > 0) {
+          $(".nav-header").addClass("darkHeader");
+          $("#moveup").addClass("show");
+        }
+      }else{
+          $(".nav-header").addClass("darkHeader");
       }
     }); //missing );
   },
