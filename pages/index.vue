@@ -396,7 +396,7 @@ export default {
       email: "",
       name: "",
       message: "",
-      showTime: false,
+      showTime: true,
       homeslider: [
         "/images/about-mic-2.jpg",
         "/images/about-mic-3.jpg",
@@ -424,17 +424,17 @@ export default {
     this.blog_post = this.$store.state.blog_post;
 
 
-    console.log(new Date())
+    // console.log(new Date())
 
 
 
-    if( new Date().getTime() >= new Date('2020/05/18 08:00:00').getTime()){
+    // if( new Date().getTime() >= new Date('2020/05/18 08:00:00').getTime()){
       
-      this.showTime = true
+    //   this.showTime = true
 
-    }
+    // }
 
-      console.log(new Date())
+    //   console.log(new Date())
 
 
   },
