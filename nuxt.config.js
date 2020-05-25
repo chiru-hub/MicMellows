@@ -71,6 +71,7 @@ export default {
     generate: {
         routes: [
             '/blog/why-hospitals-are-safer-than-bazaars-in-this-pandemic-an-analogy-from-a-speakers-perspective',
+            'blog/covid-19-pandemic-crisis-can-be-craftily-used-to-plough-through-long-pending-deep-rooted-structural-economical-and-behavioral-reforms'
         ]
     }
 }
