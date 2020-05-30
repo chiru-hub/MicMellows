@@ -381,7 +381,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
     <div class="fourth-part about">
       <div class="my-container ">
         <div>
-          <h1 class="text-center py-10">About MicMellows</h1>
+          <h1 class="text-center py-10">About Micmellows</h1>
           <img class="m-auto" src="/images/about-mic-2.jpg" alt />
         </div>
         <p
