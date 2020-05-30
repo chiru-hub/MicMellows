@@ -354,6 +354,30 @@ A passionate thinker,writer, story teller and Speaker.</p>
 
     -->
 
+    <!-- 
+
+      Recent Stories start
+      
+       -->
+
+    <div class="recent">
+      <div class="my-container px-5">
+        <div class="p-12">
+          <h1 class="text-center">Recent Stories</h1>
+        </div>
+        <div class="flex w-full flex-wrap">
+          <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-5 pb-16">
+            <img src="/images/micsmm.jpg" alt="">
+            <div class="recent-content mt-3">
+              <p>Invest in your Child's future. Enroll them in our special batch , starts from 13th of June. Register today! 
+                Call or Whatsapp us for any query.
+                Seats filling up fast. Hurry!!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="fourth-part about">
       <div class="my-container ">
         <div>
@@ -769,6 +793,31 @@ button {
 
     img {
       object-fit: cover;
+    }
+  }
+}
+
+.recent {
+  background-image: linear-gradient( #f8650c 50%,#cd1e01 50%);
+
+
+  h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  img {
+    border-radius: 8px;
+  }
+
+  &-content {
+    
+    
+    p {
+      color:white;
+      text-align: center;
+      line-height: 1.3;
     }
   }
 }
