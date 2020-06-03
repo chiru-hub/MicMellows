@@ -369,7 +369,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
           <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-5 pb-16">
             <img src="/images/micsmm.jpg" alt="">
             <div class="recent-content mt-3">
-              <p>Invest in your Child's future. Enroll them in our special batch , starts from 13th of June. Register today! 
+              <p>Invest in your Child's future. Enroll them in our special batch , starts from 14th of June. Register today! 
                 Call or Whatsapp us for any query.
                 Seats filling up fast. Hurry!!</p>
             </div>
