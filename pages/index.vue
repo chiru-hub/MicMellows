@@ -12,12 +12,14 @@
     <div class="header">
       <div style="position:absolute;z-index:99;left:0;right:0;margin:auto;top:0;bottom:0;">
         <div class="join-now-contents w-full">
-        <div class="my-container carousel-text">
-                <h2 class="text-left">Unfold Dreams Within</h2>
-                <p>Micmellows is a professional Public Speaking, Goal Setting and Personality </p>
-                <p>Development Institute with a vision to ensure every individual identify </p>
-                <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
-                <button class="mt-16"  v-scroll-to="{
+          <div class="my-container carousel-text">
+            <h2 class="text-left">Unfold Dreams Within</h2>
+            <p>Micmellows is a professional Public Speaking, Goal Setting and Personality</p>
+            <p>Development Institute with a vision to ensure every individual identify</p>
+            <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
+            <button
+              class="mt-16"
+              v-scroll-to="{
                 el: '.contact',
                 duration: 1000,
             }"
@@ -42,7 +44,7 @@
     </div>
 
     <div class="first-part third-part">
-      <div class="my-container  px-5">
+      <div class="my-container px-5">
         <!-- <div class="p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
@@ -65,25 +67,25 @@
               <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
-        </div> -->
+        </div>-->
         <div class="container pt-10 md:p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
             class="text-center md:w-3/5 mt-10 mx-auto"
-          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>  
-        <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
-          <div class="w-full lg:w-1/2 p-10 lg:pr-10">
-            <div class="justify-center third-part-cards">
-              <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
-              <div class="cards-content w-10/12 text-center w-full px-5">
-                <h4>Rita Harlalka</h4>
-                <p>MBA in HR</p>
-                <p style="min-height:8.4rem"
-                  class="mt-10"
-                >Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
-                A passionate thinker,writer, story teller and Speaker.</p>
+          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
+          <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
+            <div class="w-full lg:w-1/2 p-10 lg:pr-10">
+              <div class="justify-center third-part-cards">
+                <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
+                <div class="cards-content w-10/12 text-center w-full px-5">
+                  <h4>Rita Harlalka</h4>
+                  <p>MBA in HR</p>
+                  <p style="min-height:8.4rem" class="mt-10">
+                    Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
+                    A passionate thinker,writer, story teller and Speaker.
+                  </p>
+                </div>
               </div>
-            </div>
             </div>
             <div class="w-full lg:w-1/2 p-10 lg:pl-10">
               <div class="justify-center third-part-cards">
@@ -177,7 +179,7 @@
       </div>
     </div>
     <div class="second-part events">
-      <div class="my-container  pb-40">
+      <div class="my-container pb-40">
         <h1 class="text-center pt-10">Our Events</h1>
 
         <div class="flex flex-wrap justify-between">
@@ -257,7 +259,7 @@
       class="third-part first-part"
       style="background-image: linear-gradient(#cd1e01 61%, #f8650c 30%);"
     >
-      <div class="my-container  px-5">
+      <div class="my-container px-5">
         <!-- <h1 class="text-center">What they are Saying?</h1>
         <div class="flex flex-wrap w-full pt-20 justify-around">
           <div class="w-full lg:w-1/2 p-10 lg:pr-10">
@@ -285,17 +287,17 @@ A passionate thinker,writer, story teller and Speaker.</p>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>-->
         <!-- <div class="p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
             class="text-center md:w-3/5 mt-10 mx-auto"
           >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
-        </div> -->
+        </div>-->
         <h1 class="text-center pt-20">What they are Saying?</h1>
         <div class="px-0 pb-20 pt-20 flex w-full flex-wrap">
           <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pr-4">
-            <div class="">
+            <div class>
               <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
@@ -305,7 +307,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
             </div>
           </div>-->
           <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pl-4">
-            <div class="">
+            <div class>
               <img src="/images/MIC_4_M2-01_new.jpeg" class="w-full h-full object-cover" />
             </div>
           </div>
@@ -320,25 +322,27 @@ A passionate thinker,writer, story teller and Speaker.</p>
 
     -->
 
-    <div class="blog" v-if="showTime" style="background-color: #cd1e01">
-      <div class="my-container  px-5">
+    <div class="blog" style="background-color: #cd1e01">
+      <div class="my-container px-5">
         <div class="p-12">
           <h1 class="text-center">Blogs</h1>
         </div>
         <div class="flex w-full flex-wrap">
           <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4" v-for="p in blog_post" :key="p.id">
-            <div class="blog-post p-5 pb-16">
+            <div class="blog-post p-5 pb-16" v-if="p.showTime">
               <nuxt-link :to="'/blog/' + p.slug">
                 <div class="blog-image w-full">
-                  <img :src="p.header_image" class="w-full h-full object-cover" style="height: 200px" />
+                  <img
+                    :src="p.header_image"
+                    class="w-full h-full object-cover"
+                    style="height: 200px"
+                  />
                 </div>
                 <div class="blog-title pt-5 pb-3">
                   <h4 style="font-size:16px" class="clamp2">{{p.title}}</h4>
                 </div>
                 <div class="blog-content">
-                  <p
-                    class="clamp2"
-                  >{{p.extract}}</p>
+                  <p class="clamp2">{{p.extract}}</p>
                 </div>
               </nuxt-link>
             </div>
@@ -358,7 +362,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
 
       Recent Stories start
       
-       -->
+    -->
 
     <div class="recent">
       <div class="my-container px-5">
@@ -367,11 +371,13 @@ A passionate thinker,writer, story teller and Speaker.</p>
         </div>
         <div class="flex w-full flex-wrap">
           <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-5 pb-16">
-            <img src="/images/micsmm.jpg" alt="">
+            <img src="/images/micsmm.jpg" alt />
             <div class="recent-content mt-3">
-              <p>Invest in your Child's future. Enroll them in our special batch , starts from 14th of June. Register today! 
+              <p>
+                Invest in your Child's future. Enroll them in our special batch , starts from 14th of June. Register today!
                 Call or Whatsapp us for any query.
-                Seats filling up fast. Hurry!!</p>
+                Seats filling up fast. Hurry!!
+              </p>
             </div>
           </div>
         </div>
@@ -379,7 +385,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
     </div>
 
     <div class="fourth-part about">
-      <div class="my-container ">
+      <div class="my-container">
         <div>
           <h1 class="text-center py-10">About Micmellows</h1>
           <img class="m-auto" src="/images/about-mic-2.jpg" alt />
@@ -428,6 +434,7 @@ export default {
       ],
 
       blog_post: [],
+      blog_id: 4,
 
       slickOptions: {
         dots: false,
@@ -445,22 +452,22 @@ export default {
     };
   },
   mounted() {
-    this.blog_post = this.$store.state.blog_post;
+    this.blog_post = JSON.parse(JSON.stringify(this.$store.state.blog_post));
 
+    for (var i = 0; i < this.blog_post.length; i++) {
+      if (this.blog_post[i].id == this.blog_id) {
+        this.blog_post[i].showTime = false;
+        if (new Date().getTime() >= new Date("2020/06/06 21:19:00").getTime()) {
+          this.blog_post[i].showTime = true;
+        }
+      } else {
+        this.blog_post[i].showTime = true;
+      }
+    }
 
     // console.log(new Date())
 
-
-
-    // if( new Date().getTime() >= new Date('2020/05/18 08:00:00').getTime()){
-      
-    //   this.showTime = true
-
-    // }
-
     //   console.log(new Date())
-
-
   },
   methods: {
     sendEmail: function() {
@@ -798,8 +805,7 @@ button {
 }
 
 .recent {
-  background-image: linear-gradient( #f8650c 50%,#cd1e01 50%);
-
+  background-image: linear-gradient(#f8650c 50%, #cd1e01 50%);
 
   h1 {
     color: white;
@@ -812,10 +818,8 @@ button {
   }
 
   &-content {
-    
-    
     p {
-      color:white;
+      color: white;
       text-align: center;
       line-height: 1.3;
     }
