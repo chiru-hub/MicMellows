@@ -1,5 +1,5 @@
 <template>
-  <div class="footer text-center py-3">
+  <div class="footer text-center py-20 px-10">
     <p class="m-0">
       Copyrights @ Micmellows. All Rights Reserved.
       <span>Designed & Developed by <a target="_blank" href="https://tecmeadows.com">TecMeadows</a></span>

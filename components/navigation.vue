@@ -6,19 +6,7 @@
         style="display:flex; justify-content: space-between;align-items:center"
       >
         <nuxt-link to="/" style="display:flex; align-items: center">
-          <svg
-            class="w-10 h-10 text-red-500"
-            width="54"
-            height="54"
-            viewBox="0 0 54 54"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>TailwindCSS</title>
-            <path
-              fill="currentColor"
-              d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-            />
-          </svg>
+          <img src="/icon.png" style="height:100%;width:50px" />
           <h6
             style="margin-bottom: 0; font-family: 'bold'; font-size: 30px; margin-left: 10px"
           >Micmellows</h6>
@@ -35,19 +23,27 @@
           <nuxt-link
             class="link"
             v-scroll-to="{
-                el: '.articles',
+                el: '.courses',
                 duration: 1000,
             }"
             to="/"
-          >Articles</nuxt-link>
+          >Courses</nuxt-link>
           <nuxt-link
             class="link"
             v-scroll-to="{
-                el: '.training',
+                el: '.events',
                 duration: 1000,
             }"
             to="/"
-          >Training</nuxt-link>
+          >Events</nuxt-link>
+          <nuxt-link
+            class="link"
+            v-scroll-to="{
+                el: '.blog',
+                duration: 1000,
+            }"
+            to="/"
+          >Blogs</nuxt-link>
           <nuxt-link
             v-scroll-to="{
                 el: '.about',
@@ -56,6 +52,14 @@
             class="link"
             to="/"
           >About Us</nuxt-link>
+          <nuxt-link
+            v-scroll-to="{
+                el: '.contact',
+                duration: 1000,
+            }"
+            class="link"
+            to="/"
+          >Contact Us</nuxt-link>
         </div>
         <div
           @click="showMenu"
@@ -77,7 +81,8 @@
           >
             <g>
               <g>
-                <path fill="white"
+                <path
+                  fill="white"
                   d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636
 			c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"
                 />
@@ -85,7 +90,8 @@
             </g>
             <g>
               <g>
-                <path fill="white"
+                <path
+                  fill="white"
                   d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636
 			c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"
                 />
@@ -93,7 +99,8 @@
             </g>
             <g>
               <g>
-                <path fill="white"
+                <path
+                  fill="white"
                   d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636
 			c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"
                 />
@@ -121,9 +128,11 @@
       <div class="mobile-nav opacity-hide">
         <div class="nav">
           <div class="link" @click="goTo('html')" to="/">Home</div>
-          <div class="link" @click="goTo('.offers')" to="/services">Offers</div>
-          <div class="link" @click="goTo('.all_products')" to="/ourwork">Products</div>
+          <div class="link" @click="goTo('.courses')" to="/services">Courses</div>
+          <div class="link" @click="goTo('.events')" to="/ourwork">Events</div>
+          <div class="link" @click="goTo('.blog')" to="/">Blogs</div>
           <div class="link" @click="goTo('.about')" to="/">About Us</div>
+          <div class="link" @click="goTo('.contact')" to="/">Contact Us</div>
         </div>
         <div @click="closeMenu" class="show-on-medium-and-down hamburger">
           <img src="~static/close.svg" style="height:20px" />
@@ -159,12 +168,12 @@
 
 .nav-header.darkHeader {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.07);
-  background-color: #cd1e01 !important;
+  background-color: #f8650c !important;
 }
 
 .nav-header.darkHeader a,
 .nav-header.darkHeader svg {
-  color: white!important;
+  color: white !important;
 }
 .nav-header.darkHeader .menu-svg {
   fill: white;
@@ -310,6 +319,7 @@ export default {
   },
 
   mounted() {
+    var that = this;
     var lastScrollTop = 0;
     $(window).scroll(function(event) {
       var st = $(this).scrollTop();
@@ -325,14 +335,18 @@ export default {
     $(window).scroll(function() {
       var scroll = $(window).scrollTop();
 
-      //>=, not <=
-      if (scroll <= 0) {
-        //clearHeader, not clearheader - caps H
-        $(".nav-header").removeClass("darkHeader");
-        $("#moveup").removeClass("show");
-      } else if (scroll > 0) {
-        $(".nav-header").addClass("darkHeader");
-        $("#moveup").addClass("show");
+      if ($nuxt.$route.name == "index") {
+        //>=, not <=
+        if (scroll <= 0) {
+          //clearHeader, not clearheader - caps H
+          $(".nav-header").removeClass("darkHeader");
+          $("#moveup").removeClass("show");
+        } else if (scroll > 0) {
+          $(".nav-header").addClass("darkHeader");
+          $("#moveup").addClass("show");
+        }
+      }else{
+          $(".nav-header").addClass("darkHeader");
       }
     }); //missing );
   },

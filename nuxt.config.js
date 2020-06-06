@@ -4,17 +4,17 @@ export default {
      ** Headers of the page
      */
     head: {
-        title: process.env.npm_package_name || '',
+        title: 'Micmellows',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
             {
                 rel: "stylesheet",
-                href: "/css/framework.css"
+                href: "/css/framework.css?v=1"
             }
         ],
         script: [
@@ -40,14 +40,18 @@ export default {
     plugins: [
         '~/plugins/common',
         { src: '~/plugins/carousel.js', ssr: false },
+        { src: '~plugins/ga.js', ssr: false }
     ],
+
     /*
      ** Nuxt.js dev-modules
      */
     buildModules: [
         // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
         '@nuxtjs/tailwindcss',
+        // 'nuxt-purgecss',
     ],
+
     /*
      ** Nuxt.js modules
      */
@@ -61,13 +65,15 @@ export default {
         /*
          ** You can extend webpack config here
          */
+        transpile: ['vue-slick'],
         extend(config, ctx) {}
     },
     generate: {
         routes: [
             '/blog/why-hospitals-are-safer-than-bazaars-in-this-pandemic-an-analogy-from-a-speakers-perspective',
             '/blog/covid-19-pandemic-crisis-can-be-craftily-used-to-plough-through-long-pending-deep-rooted-structural-economical-and-behavioral-reforms',
-            '/blog/be-the-mask-warriors-of-assam'
+            '/blog/be-the-mask-warriors-of-assam',
+            'blog/fear-of-unknown'
         ]
     }
 }
