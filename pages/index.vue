@@ -326,7 +326,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
           <h1 class="text-center">Blogs</h1>
         </div>
         <div class="flex w-full flex-wrap">
-          <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4" v-for="p in blog_post" :key="p.id">
+          <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4" v-if="p.showTime" v-for="p in blog_post" :key="p.id">
             <div class="blog-post p-5 pb-16">
               <nuxt-link :to="'/blog/' + p.slug">
                 <div class="blog-image w-full">
@@ -428,6 +428,7 @@ export default {
       ],
 
       blog_post: [],
+      blog_id: 7,
 
       slickOptions: {
         dots: false,
@@ -445,8 +446,18 @@ export default {
     };
   },
   mounted() {
-    this.blog_post = this.$store.state.blog_post;
+    this.blog_post = JSON.parse(JSON.stringify(this.$store.state.blog_post)).reverse();
 
+    for (var i = 0; i < this.blog_post.length; i++) {
+      if (this.blog_post[i].id == this.blog_id) {
+        this.blog_post[i].showTime = false;
+        if (new Date().getTime() >= new Date("2020/06/22 08:00:00").getTime()) {
+          this.blog_post[i].showTime = true;
+        }
+      } else {
+        this.blog_post[i].showTime = true;
+      }
+    }
 
     // console.log(new Date())
 
