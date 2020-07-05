@@ -33,14 +33,17 @@ export default {
     /*
      ** Global CSS
      */
-    css: [],
+    css: [
+        'plyr/dist/plyr.css'
+    ],
     /*
      ** Plugins to load before mounting the App
      */
     plugins: [
         '~/plugins/common',
         { src: '~/plugins/carousel.js', ssr: false },
-        { src: '~plugins/ga.js', ssr: false }
+        { src: '~plugins/ga.js', ssr: false },
+        '~/plugins/plyr.js'
     ],
 
     /*

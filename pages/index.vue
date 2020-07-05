@@ -17,13 +17,17 @@
             <p>Micmellows is a professional Public Speaking, Goal Setting and Personality</p>
             <p>Development Institute with a vision to ensure every individual identify</p>
             <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
+
             <button
-              class="mt-16"
               v-scroll-to="{
                 el: '.contact',
                 duration: 1000,
             }"
-            >Join Now</button>
+              class="mt-16 hero button-4"
+            >
+              <div class="eff-4"></div>
+              <a href="#">Join Now</a>
+            </button>
           </div>
         </div>
         <div id="video_overlays"></div>
@@ -95,6 +99,19 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="container pt-10 md:p-12">
+          <h1 class="text-center">Why MicMellows?</h1>
+          <p
+            class="text-center md:w-3/5 mt-10 mx-auto"
+          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
+          <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
+            <vue-plyr>
+              <video poster="poster.png" src="/videos/video.mp4">
+                <source src="/videos/video.mp4" type="video/mp4" size="720" />
+              </video>
+            </vue-plyr>
           </div>
         </div>
         <div class="px-0 pb-32 courses">
@@ -547,11 +564,56 @@ export default {
 }
 
 button {
-  height: 4rem;
-  width: 12rem;
-  border: 2px solid #f26101;
+  height: 6rem;
+  font-size: 20px;
+  width: 28rem;
+  // border: 2px solid #f26101;
   border-radius: 8px;
   color: #f26101;
+
+  &.hero {
+    background-color: #f26101;
+    color: #fff;
+    border-radius: 3px;
+  }
+}
+
+.btn-2 {
+  color: #40bf90;
+}
+.btn-2:before,
+.btn-2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.btn-2:before {
+  right: -50px;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid #126c4a;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.btn-2:after {
+  left: -50px;
+  border-left: 50px solid transparent;
+  border-top: 80px solid #126c4a;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.btn-2:hover {
+  color: #c7ecde;
+}
+.btn-2:hover:before {
+  -webkit-transform: translateX(-49%);
+  transform: translateX(-49%);
+}
+.btn-2:hover:after {
+  -webkit-transform: translateX(49%);
+  transform: translateX(49%);
 }
 
 .join-now {
@@ -854,6 +916,28 @@ button {
   }
 }
 
+.video {
+  background-image: linear-gradient(#f8650c 50%, #cd1e01 50%);
+
+  h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  img {
+    border-radius: 8px;
+  }
+
+  &-content {
+    p {
+      color: white;
+      text-align: center;
+      line-height: 1.3;
+    }
+  }
+}
+
 .fourth-part {
   background: #f8650c;
 
@@ -955,5 +1039,37 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.52);
   z-index: 1;
+}
+
+.button-4 {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.button-4 a {
+  font-family: arial;
+  font-size: 23px;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 50px;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+.eff-4 {
+  width: 28rem;
+  height: 6rem;
+  left: -28rem;
+  background: #cd1e01;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+  top: 0;
+}
+.button-4:hover .eff-4 {
+  left: 0;
+}
+.button-4:hover a {
+  color: #fff;
 }
 </style>
