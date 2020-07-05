@@ -73,11 +73,11 @@ export default {
             '/blog/why-hospitals-are-safer-than-bazaars-in-this-pandemic-an-analogy-from-a-speakers-perspective',
             '/blog/covid-19-pandemic-crisis-can-be-craftily-used-to-plough-through-long-pending-deep-rooted-structural-economical-and-behavioral-reforms',
             '/blog/be-the-mask-warriors-of-assam',
-            'blog/fear-of-unknown',
-            'blog/make-in-india',
-            'blog/suicide-is-as',
-            'blog/switchtrack-the-curse-of-effective',
-            'blog/ask-rightfully-for-your-rights',
+            '/blog/fear-of-unknown',
+            '/blog/make-in-india',
+            '/blog/suicide-is-as',
+            '/blog/switchtrack-the-curse-of-effective',
+            '/blog/ask-rightfully-for-your-rights',
         ]
     }
 }
