@@ -1,5 +1,15 @@
 <template>
   <div>
+    <transition name="fade">
+      <div class="video-popup" v-if="showToast">
+        <div class="cursor-pointer closeToast" @click="showToast = false">x</div>
+        <vue-plyr ref="popupvideo">
+          <video poster="/images/about-mic-2.jpg" :src="video_url">
+          </video>
+        </vue-plyr>
+      </div>
+    </transition>
+
     <!-- <div class="join-now">
       <Header />
       <div class="join-now-contents w-full md:w-2/6 md:pl-40">
@@ -32,6 +42,7 @@
         </div>
         <div id="video_overlays"></div>
         <video
+          poster="/images/about-mic-2.jpg"
           preload="auto"
           autoplay="autoplay"
           muted
@@ -108,7 +119,7 @@
           >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
           <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
             <vue-plyr>
-              <video poster="poster.png" src="/videos/video.mp4">
+              <video poster="/images/about-mic-2.jpg" src="/videos/video.mp4">
                 <source src="/videos/video.mp4" type="video/mp4" size="720" />
               </video>
             </vue-plyr>
@@ -269,7 +280,7 @@
     </div>
     <div
       class="third-part first-part"
-      style="background-image: linear-gradient(#cd1e01 61%, #f8650c 30%);"
+      style="background-image: linear-gradient(#f8650c 27%, #cd1e01 75%)"
     >
       <div class="my-container px-5">
         <!-- <h1 class="text-center">What they are Saying?</h1>
@@ -407,14 +418,17 @@ A passionate thinker,writer, story teller and Speaker.</p>
           <h1 class="text-center">Videos</h1>
         </div>
         <div class="flex w-full flex-wrap">
-          <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-5 pb-16">
-            <img src="/images/micsmm.jpg" alt />
+          <div
+            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
+            v-for="p in 3"
+            :key="p"
+            @click="openPlyr('/videos/video.mp4')"
+          >
+            <div class="video-thumbnail">
+              <img src="/images/micsmm.jpg" alt="Video thumbnail" />
+            </div>
             <div class="recent-content mt-3">
-              <p>
-                Invest in your Child's future. Enroll them in our special batch , starts from 14th of June. Register today!
-                Call or Whatsapp us for any query.
-                Seats filling up fast. Hurry!!
-              </p>
+              <p>Video Description will be here if required.</p>
             </div>
           </div>
         </div>
@@ -473,6 +487,12 @@ export default {
       blog_post: [],
       blog_id: 7,
 
+      video_url: "",
+
+      errorMessage: "",
+      showToast: false,
+      toastType: false,
+
       slickOptions: {
         dots: false,
         dotsClass: "slick-dots custom-dot-class",
@@ -487,6 +507,11 @@ export default {
         // Any other options that can be got from plugin documentation
       }
     };
+  },
+  computed: {
+    player() {
+      return this.$refs.popupvideo.player;
+    }
   },
   mounted() {
     this.blog_post = JSON.parse(
@@ -515,6 +540,13 @@ export default {
     //   console.log(new Date())
   },
   methods: {
+    openPlyr: function(video_url) {
+      console.log(video_url);
+
+      this.video_url = video_url
+
+      this.showToast = true;
+    },
     sendEmail: function() {
       var payload = {
         name: this.name,
@@ -675,7 +707,7 @@ button {
 }
 
 .first-part {
-  background-image: linear-gradient(#cd1e01 70%, #f8650c 30%);
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
 
   h1 {
     color: white;
@@ -764,7 +796,7 @@ button {
 }
 
 .second-part {
-  background-image: linear-gradient(#cd1e01 60%, #f8650c 40%);
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
   h1 {
     color: white;
     font-size: 4rem;
@@ -799,7 +831,7 @@ button {
 }
 
 .third-part {
-  background-image: linear-gradient(#cd1e01 53%, #f8650c 50%);
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
 
   h1 {
     color: white;
@@ -895,7 +927,7 @@ button {
 }
 
 .recent {
-  background-image: linear-gradient(#f8650c 50%, #cd1e01 50%);
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
 
   h1 {
     color: white;
@@ -917,7 +949,7 @@ button {
 }
 
 .video {
-  background-image: linear-gradient(#f8650c 50%, #cd1e01 50%);
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
 
   h1 {
     color: white;
@@ -1071,5 +1103,24 @@ button {
 }
 .button-4:hover a {
   color: #fff;
+}
+
+.video-thumbnail {
+  @apply relative cursor-pointer;
+
+  &:after {
+    @apply absolute right-0 bottom-0 top-0 left-0;
+    content: "";
+    background-image: url("/icons/play.svg");
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+  &:before {
+    @apply absolute right-0 bottom-0 top-0 left-0;
+    content: "";
+    border-radius: 8px;
+    background-color: #0000007a;
+  }
 }
 </style>
