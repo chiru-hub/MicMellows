@@ -78,6 +78,7 @@ export default {
             '/blog/suicide-is-as',
             '/blog/switchtrack-the-curse-of-effective',
             '/blog/ask-rightfully-for-your-rights',
+            '/blog/hearing-not-listening'
         ]
     }
 }
