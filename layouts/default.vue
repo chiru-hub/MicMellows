@@ -426,6 +426,73 @@ body {
     display: none;
 }
 
+.video-popup {
+  width: 100%;
+  line-height: 20px;
+  color: white;
+  border-radius: 3px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  max-width: 50%;
+  z-index: 10002;
+  bottom: 0;
+  margin: auto;
+  height: 520px;
+  &.mini {
+    width: 100%;
+    line-height: 20px;
+    color: white;
+    border-radius: 3px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    max-width: 50%;
+    z-index: 10002;
+    bottom: 0;
+    margin: auto;
+    height: 520px;
+  }
+  &:before {
+    @apply fixed right-0 bottom-0 top-0 left-0;
+    content: "";
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.47843);
+  }
+  &.success {
+    background-color: #4caf50;
+  }
+  &.error {
+    background-color: #f44336;
+  }
+  .closeToast {
+    @apply cursor-pointer absolute;
+    right: -20px;
+    top: -20px;
+    z-index: 1000;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .video-popup {
+    width: 100%;
+    max-width: 100%;
+    .closeToast {
+      right: 20px;
+      top: 20px;
+    }
+  }
+}
 
 
 </style>

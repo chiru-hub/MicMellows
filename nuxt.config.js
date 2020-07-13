@@ -40,7 +40,8 @@ export default {
     plugins: [
         '~/plugins/common',
         { src: '~/plugins/carousel.js', ssr: false },
-        { src: '~plugins/ga.js', ssr: false }
+        { src: '~plugins/ga.js', ssr: false },
+        '~/plugins/plyr.js'
     ],
 
     /*

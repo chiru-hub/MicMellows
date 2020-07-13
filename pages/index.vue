@@ -378,6 +378,29 @@ A passionate thinker,writer, story teller and Speaker.</p>
       </div>
     </div>
 
+    <div class="video">
+      <div class="my-container px-5">
+        <div class="p-12">
+          <h1 class="text-center">Videos</h1>
+        </div>
+        <div class="flex w-full flex-wrap">
+          <div
+            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
+            v-for="p in 3"
+            :key="p"
+            @click="openPlyr('/videos/video1.mp4')"
+          >
+            <div class="video-thumbnail">
+              <img src="/images/micsmm.jpg" alt="Video thumbnail" />
+            </div>
+            <div class="recent-content mt-3">
+              <p>Video Description will be here if required.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="fourth-part about">
       <div class="my-container ">
         <div>
@@ -430,6 +453,8 @@ export default {
       blog_post: [],
       blog_id: 9,
 
+      video_url: "",
+
       slickOptions: {
         dots: false,
         dotsClass: "slick-dots custom-dot-class",
@@ -474,6 +499,13 @@ export default {
 
   },
   methods: {
+    openPlyr: function(video_url) {
+      console.log(video_url);
+      this.video_url = video_url
+      this.showToast = true;
+    },
+
+
     sendEmail: function() {
       var payload = {
         name: this.name,
@@ -833,6 +865,25 @@ button {
   }
 }
 
+.video {
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
+  h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  img {
+    border-radius: 8px;
+  }
+  &-content {
+    p {
+      color: white;
+      text-align: center;
+      line-height: 1.3;
+    }
+  }
+}
+
 .fourth-part {
   background: #f8650c;
 
@@ -926,5 +977,61 @@ button {
   /* modern browser */
   color: white;
   opacity: 1;
+}
+
+#video_overlays {
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.52);
+  z-index: 1;
+}
+.button-4 {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.button-4 a {
+  font-family: arial;
+  font-size: 23px;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 50px;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+.eff-4 {
+  width: 28rem;
+  height: 6rem;
+  left: -28rem;
+  background: #cd1e01;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+  top: 0;
+}
+.button-4:hover .eff-4 {
+  left: 0;
+}
+.button-4:hover a {
+  color: #fff;
+}
+.video-thumbnail {
+  @apply relative cursor-pointer;
+  &:after {
+    @apply absolute right-0 bottom-0 top-0 left-0;
+    content: "";
+    background-image: url("/icons/play.svg");
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+  &:before {
+    @apply absolute right-0 bottom-0 top-0 left-0;
+    content: "";
+    border-radius: 8px;
+    background-color: #0000007a;
+  }
 }
 </style>
