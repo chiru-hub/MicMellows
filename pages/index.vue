@@ -1,5 +1,15 @@
 <template>
   <div>
+    <transition name="fade">
+      <div class="video-popup" v-if="showToast">
+        <div class="cursor-pointer closeToast" @click="showToast = false">x</div>
+        <vue-plyr ref="popupvideo">
+          <video poster="/images/about-mic-2.jpg" :src="video_url">
+          </video>
+        </vue-plyr>
+      </div>
+    </transition>
+
     <!-- <div class="join-now">
       <Header />
       <div class="join-now-contents w-full md:w-2/6 md:pl-40">
@@ -12,37 +22,39 @@
     <div class="header">
       <div style="position:absolute;z-index:99;left:0;right:0;margin:auto;top:0;bottom:0;">
         <div class="join-now-contents w-full">
-        <div class="my-container carousel-text">
-                <h2 class="text-left">Unfold Dreams Within</h2>
-                <p>Micmellows is a professional Public Speaking, Goal Setting and Personality </p>
-                <p>Development Institute with a vision to ensure every individual identify </p>
-                <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
-                <button class="mt-16"  v-scroll-to="{
+          <div class="my-container carousel-text">
+            <h2 class="text-left">Unfold Dreams Within</h2>
+            <p>Micmellows is a professional Public Speaking, Goal Setting and Personality</p>
+            <p>Development Institute with a vision to ensure every individual identify</p>
+            <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
+
+            <button
+              v-scroll-to="{
                 el: '.contact',
                 duration: 1000,
             }"
-            >Join Now</button>
+              class="mt-16 hero button-4"
+            >
+              <div class="eff-4"></div>
+              <a href="#">Join Now</a>
+            </button>
           </div>
         </div>
+        <div id="video_overlays"></div>
+        <video
+          poster="/images/about-mic-2.jpg"
+          preload="auto"
+          autoplay="autoplay"
+          muted
+          loop
+          src="/videos/video1.mp4"
+          style="width: 100%;position: absolute;top: 0px;left: 0px;height: 100%;object-fit: cover;z-index: -1"
+        ></video>
       </div>
-      <client-only>
-        <carousel
-          class="homepageSlider"
-          :per-page="1"
-          :mouse-drag="false"
-          :autoplay="true"
-          :loop="true"
-          :autoplayTimeout="5000"
-        >
-          <slide v-for="p in homeslider" :key="p.id">
-            <img class="d-block w-full h-full object-cover img1" :src="p" alt="First slide" />
-          </slide>
-        </carousel>
-      </client-only>
     </div>
 
     <div class="first-part third-part">
-      <div class="my-container  px-5">
+      <div class="my-container px-5">
         <!-- <div class="p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
@@ -65,25 +77,25 @@
               <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
-        </div> -->
+        </div>-->
         <div class="container pt-10 md:p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
             class="text-center md:w-3/5 mt-10 mx-auto"
-          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>  
-        <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
-          <div class="w-full lg:w-1/2 p-10 lg:pr-10">
-            <div class="justify-center third-part-cards">
-              <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
-              <div class="cards-content w-10/12 text-center w-full px-5">
-                <h4>Rita Harlalka</h4>
-                <p>MBA in HR</p>
-                <p style="min-height:8.4rem"
-                  class="mt-10"
-                >Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
-                A passionate thinker,writer, story teller and Speaker.</p>
+          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
+          <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
+            <div class="w-full lg:w-1/2 p-10 lg:pr-10">
+              <div class="justify-center third-part-cards">
+                <img class="w-full h-full object-cover" src="/images/wts1.jpg" alt />
+                <div class="cards-content w-10/12 text-center w-full px-5">
+                  <h4>Rita Harlalka</h4>
+                  <p>MBA in HR</p>
+                  <p style="min-height:8.4rem" class="mt-10">
+                    Recruiter in global HR leader Mark Watt and Anderson. Received Gold Medal from then president Dr APJ Abdul Kalam, Served as Area Director, Elected as Division Director in Toastmasters Club.
+                    A passionate thinker,writer, story teller and Speaker.
+                  </p>
+                </div>
               </div>
-            </div>
             </div>
             <div class="w-full lg:w-1/2 p-10 lg:pl-10">
               <div class="justify-center third-part-cards">
@@ -98,6 +110,19 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="container pt-10 md:p-12">
+          <h1 class="text-center">Why MicMellows?</h1>
+          <p
+            class="text-center md:w-3/5 mt-10 mx-auto"
+          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
+          <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
+            <vue-plyr>
+              <video poster="/images/about-mic-2.jpg" src="/videos/video1.mp4">
+                <source src="/videos/video1.mp4" type="video/mp4" size="720" />
+              </video>
+            </vue-plyr>
           </div>
         </div>
         <div class="px-0 pb-32 courses">
@@ -177,7 +202,7 @@
       </div>
     </div>
     <div class="second-part events">
-      <div class="my-container  pb-40">
+      <div class="my-container pb-40">
         <h1 class="text-center pt-10">Our Events</h1>
 
         <div class="flex flex-wrap justify-between">
@@ -255,9 +280,9 @@
     </div>
     <div
       class="third-part first-part"
-      style="background-image: linear-gradient(#cd1e01 61%, #f8650c 30%);"
+      style="background-image: linear-gradient(#f8650c 27%, #cd1e01 75%)"
     >
-      <div class="my-container  px-5">
+      <div class="my-container px-5">
         <!-- <h1 class="text-center">What they are Saying?</h1>
         <div class="flex flex-wrap w-full pt-20 justify-around">
           <div class="w-full lg:w-1/2 p-10 lg:pr-10">
@@ -285,17 +310,17 @@ A passionate thinker,writer, story teller and Speaker.</p>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>-->
         <!-- <div class="p-12">
           <h1 class="text-center">Why MicMellows?</h1>
           <p
             class="text-center md:w-3/5 mt-10 mx-auto"
           >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
-        </div> -->
+        </div>-->
         <h1 class="text-center pt-20">What they are Saying?</h1>
         <div class="px-0 pb-20 pt-20 flex w-full flex-wrap">
           <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pr-4">
-            <div class="">
+            <div class>
               <img src="/images/MIC_17-01.jpg" class="w-full h-full object-cover" />
             </div>
           </div>
@@ -305,7 +330,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
             </div>
           </div>-->
           <div class="w-full md:w-1/2 lg:w-1/2 p-5 lg:pl-4">
-            <div class="">
+            <div class>
               <img src="/images/MIC_4_M2-01_new.jpeg" class="w-full h-full object-cover" />
             </div>
           </div>
@@ -321,24 +346,31 @@ A passionate thinker,writer, story teller and Speaker.</p>
     -->
 
     <div class="blog" v-if="showTime" style="background-color: #cd1e01">
-      <div class="my-container  px-5">
+      <div class="my-container px-5">
         <div class="p-12">
           <h1 class="text-center">Blogs</h1>
         </div>
         <div class="flex w-full flex-wrap">
-          <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4" v-if="p.showTime" v-for="p in blog_post" :key="p.id">
+          <div
+            class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4"
+            v-if="p.showTime"
+            v-for="p in blog_post"
+            :key="p.id"
+          >
             <div class="blog-post p-5 pb-16">
               <nuxt-link :to="'/blog/' + p.slug">
                 <div class="blog-image w-full">
-                  <img :src="p.header_image" class="w-full h-full object-cover" style="height: 200px" />
+                  <img
+                    :src="p.header_image"
+                    class="w-full h-full object-cover"
+                    style="height: 200px"
+                  />
                 </div>
                 <div class="blog-title pt-5 pb-3">
                   <h4 style="font-size:16px" class="clamp2">{{p.title}}</h4>
                 </div>
                 <div class="blog-content">
-                  <p
-                    class="clamp2"
-                  >{{p.extract}}</p>
+                  <p class="clamp2">{{p.extract}}</p>
                 </div>
               </nuxt-link>
             </div>
@@ -358,7 +390,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
 
       Recent Stories start
       
-       -->
+    -->
 
     <div class="recent">
       <div class="my-container px-5">
@@ -367,11 +399,13 @@ A passionate thinker,writer, story teller and Speaker.</p>
         </div>
         <div class="flex w-full flex-wrap">
           <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-5 pb-16">
-            <img src="/images/micsmm.jpg" alt="">
+            <img src="/images/micsmm.jpg" alt />
             <div class="recent-content mt-3">
-              <p>Invest in your Child's future. Enroll them in our special batch , starts from 14th of June. Register today! 
+              <p>
+                Invest in your Child's future. Enroll them in our special batch , starts from 14th of June. Register today!
                 Call or Whatsapp us for any query.
-                Seats filling up fast. Hurry!!</p>
+                Seats filling up fast. Hurry!!
+              </p>
             </div>
           </div>
         </div>
@@ -402,7 +436,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
     </div>
 
     <div class="fourth-part about">
-      <div class="my-container ">
+      <div class="my-container">
         <div>
           <h1 class="text-center py-10">About Micmellows</h1>
           <img class="m-auto" src="/images/about-mic-2.jpg" alt />
@@ -451,9 +485,13 @@ export default {
       ],
 
       blog_post: [],
-      blog_id: 9,
+      blog_id: 7,
 
       video_url: "",
+
+      errorMessage: "",
+      showToast: false,
+      toastType: false,
 
       slickOptions: {
         dots: false,
@@ -470,13 +508,20 @@ export default {
       }
     };
   },
+  computed: {
+    player() {
+      return this.$refs.popupvideo.player;
+    }
+  },
   mounted() {
-    this.blog_post = JSON.parse(JSON.stringify(this.$store.state.blog_post)).reverse();
+    this.blog_post = JSON.parse(
+      JSON.stringify(this.$store.state.blog_post)
+    ).reverse();
 
     for (var i = 0; i < this.blog_post.length; i++) {
       if (this.blog_post[i].id == this.blog_id) {
         this.blog_post[i].showTime = false;
-        if (new Date().getTime() >= new Date("2020/07/13 08:00:00").getTime()) {
+        if (new Date().getTime() >= new Date("2020/06/22 08:00:00").getTime()) {
           this.blog_post[i].showTime = true;
         }
       } else {
@@ -486,26 +531,22 @@ export default {
 
     // console.log(new Date())
 
-
-
     // if( new Date().getTime() >= new Date('2020/05/18 08:00:00').getTime()){
-      
+
     //   this.showTime = true
 
     // }
 
     //   console.log(new Date())
-
-
   },
   methods: {
     openPlyr: function(video_url) {
       console.log(video_url);
+
       this.video_url = video_url
+
       this.showToast = true;
     },
-
-
     sendEmail: function() {
       var payload = {
         name: this.name,
@@ -555,11 +596,56 @@ export default {
 }
 
 button {
-  height: 4rem;
-  width: 12rem;
-  border: 2px solid #f26101;
+  height: 6rem;
+  font-size: 20px;
+  width: 28rem;
+  // border: 2px solid #f26101;
   border-radius: 8px;
   color: #f26101;
+
+  &.hero {
+    background-color: #f26101;
+    color: #fff;
+    border-radius: 3px;
+  }
+}
+
+.btn-2 {
+  color: #40bf90;
+}
+.btn-2:before,
+.btn-2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.btn-2:before {
+  right: -50px;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid #126c4a;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.btn-2:after {
+  left: -50px;
+  border-left: 50px solid transparent;
+  border-top: 80px solid #126c4a;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.btn-2:hover {
+  color: #c7ecde;
+}
+.btn-2:hover:before {
+  -webkit-transform: translateX(-49%);
+  transform: translateX(-49%);
+}
+.btn-2:hover:after {
+  -webkit-transform: translateX(49%);
+  transform: translateX(49%);
 }
 
 .join-now {
@@ -621,7 +707,7 @@ button {
 }
 
 .first-part {
-  background-image: linear-gradient(#cd1e01 70%, #f8650c 30%);
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
 
   h1 {
     color: white;
@@ -710,7 +796,7 @@ button {
 }
 
 .second-part {
-  background-image: linear-gradient(#cd1e01 60%, #f8650c 40%);
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
   h1 {
     color: white;
     font-size: 4rem;
@@ -745,7 +831,7 @@ button {
 }
 
 .third-part {
-  background-image: linear-gradient(#cd1e01 53%, #f8650c 50%);
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
 
   h1 {
     color: white;
@@ -841,8 +927,7 @@ button {
 }
 
 .recent {
-  background-image: linear-gradient( #f8650c 50%,#cd1e01 50%);
-
+  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
 
   h1 {
     color: white;
@@ -855,10 +940,8 @@ button {
   }
 
   &-content {
-    
-    
     p {
-      color:white;
+      color: white;
       text-align: center;
       line-height: 1.3;
     }
@@ -867,14 +950,17 @@ button {
 
 .video {
   background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
+
   h1 {
     color: white;
     font-size: 4rem;
     font-weight: 800;
   }
+
   img {
     border-radius: 8px;
   }
+
   &-content {
     p {
       color: white;
@@ -986,6 +1072,7 @@ button {
   background-color: rgba(0, 0, 0, 0.52);
   z-index: 1;
 }
+
 .button-4 {
   position: relative;
   box-sizing: border-box;
@@ -1017,8 +1104,10 @@ button {
 .button-4:hover a {
   color: #fff;
 }
+
 .video-thumbnail {
   @apply relative cursor-pointer;
+
   &:after {
     @apply absolute right-0 bottom-0 top-0 left-0;
     content: "";
