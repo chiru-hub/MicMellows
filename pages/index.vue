@@ -1,15 +1,5 @@
 <template>
   <div>
-    <transition name="fade">
-      <div class="video-popup" v-if="showToast">
-        <div class="cursor-pointer closeToast" @click="showToast = false">x</div>
-        <vue-plyr ref="popupvideo">
-          <video poster="/images/about-mic-2.jpg" :src="video_url">
-          </video>
-        </vue-plyr>
-      </div>
-    </transition>
-
     <!-- <div class="join-now">
       <Header />
       <div class="join-now-contents w-full md:w-2/6 md:pl-40">
@@ -19,6 +9,15 @@
       </div>
     </div>-->
 
+    <transition name="fade">
+      <div class="video-popup" v-if="showToast">
+        <div class="cursor-pointer closeToast" @click="showToast = false">x</div>
+        <vue-plyr ref="popupvideo">
+          <video poster="/images/about-mic-2.jpg" :src="video_url"></video>
+        </vue-plyr>
+      </div>
+    </transition>
+
     <div class="header">
       <div style="position:absolute;z-index:99;left:0;right:0;margin:auto;top:0;bottom:0;">
         <div class="join-now-contents w-full">
@@ -27,30 +26,30 @@
             <p>Micmellows is a professional Public Speaking, Goal Setting and Personality</p>
             <p>Development Institute with a vision to ensure every individual identify</p>
             <p>and unleash their dreams through the power of listening, thinking and expressing.</p>
-
             <button
+              class="mt-16"
               v-scroll-to="{
                 el: '.contact',
                 duration: 1000,
             }"
-              class="mt-16 hero button-4"
-            >
-              <div class="eff-4"></div>
-              <a href="#">Join Now</a>
-            </button>
+            >Join Now</button>
           </div>
         </div>
-        <div id="video_overlays"></div>
-        <video
-          poster="/images/about-mic-2.jpg"
-          preload="auto"
-          autoplay="autoplay"
-          muted
-          loop
-          src="/videos/video1.mp4"
-          style="width: 100%;position: absolute;top: 0px;left: 0px;height: 100%;object-fit: cover;z-index: -1"
-        ></video>
       </div>
+      <client-only>
+        <carousel
+          class="homepageSlider"
+          :per-page="1"
+          :mouse-drag="false"
+          :autoplay="true"
+          :loop="true"
+          :autoplayTimeout="5000"
+        >
+          <slide v-for="p in homeslider" :key="p.id">
+            <img class="d-block w-full h-full object-cover img1" :src="p" alt="First slide" />
+          </slide>
+        </carousel>
+      </client-only>
     </div>
 
     <div class="first-part third-part">
@@ -110,19 +109,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="container pt-10 md:p-12">
-          <h1 class="text-center">Why MicMellows?</h1>
-          <p
-            class="text-center md:w-3/5 mt-10 mx-auto"
-          >Micmellows will help you and your ideas to stand out and resonate with people around the world. You get individual care and one on one mentoring from experienced coaches. A holistic training to build your confidence in association with creative people around you.</p>
-          <div class="flex flex-wrap w-full pt-5 md:pt-10 justify-around">
-            <vue-plyr>
-              <video poster="/images/about-mic-2.jpg" src="/videos/video1.mp4">
-                <source src="/videos/video1.mp4" type="video/mp4" size="720" />
-              </video>
-            </vue-plyr>
           </div>
         </div>
         <div class="px-0 pb-32 courses">
@@ -280,7 +266,7 @@
     </div>
     <div
       class="third-part first-part"
-      style="background-image: linear-gradient(#f8650c 27%, #cd1e01 75%)"
+      style="background-image: linear-gradient(#cd1e01 61%, #f8650c 30%);"
     >
       <div class="my-container px-5">
         <!-- <h1 class="text-center">What they are Saying?</h1>
@@ -485,13 +471,13 @@ export default {
       ],
 
       blog_post: [],
-      blog_id: 7,
-
-      video_url: "",
+      blog_id: 9,
 
       errorMessage: "",
       showToast: false,
       toastType: false,
+
+      video_url: "",
 
       slickOptions: {
         dots: false,
@@ -521,7 +507,7 @@ export default {
     for (var i = 0; i < this.blog_post.length; i++) {
       if (this.blog_post[i].id == this.blog_id) {
         this.blog_post[i].showTime = false;
-        if (new Date().getTime() >= new Date("2020/06/22 08:00:00").getTime()) {
+        if (new Date().getTime() >= new Date("2020/07/13 08:00:00").getTime()) {
           this.blog_post[i].showTime = true;
         }
       } else {
@@ -542,11 +528,10 @@ export default {
   methods: {
     openPlyr: function(video_url) {
       console.log(video_url);
-
-      this.video_url = video_url
-
+      this.video_url = video_url;
       this.showToast = true;
     },
+
     sendEmail: function() {
       var payload = {
         name: this.name,
@@ -596,56 +581,11 @@ export default {
 }
 
 button {
-  height: 6rem;
-  font-size: 20px;
-  width: 28rem;
-  // border: 2px solid #f26101;
+  height: 4rem;
+  width: 12rem;
+  border: 2px solid #f26101;
   border-radius: 8px;
   color: #f26101;
-
-  &.hero {
-    background-color: #f26101;
-    color: #fff;
-    border-radius: 3px;
-  }
-}
-
-.btn-2 {
-  color: #40bf90;
-}
-.btn-2:before,
-.btn-2:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.btn-2:before {
-  right: -50px;
-  border-right: 50px solid transparent;
-  border-bottom: 80px solid #126c4a;
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-.btn-2:after {
-  left: -50px;
-  border-left: 50px solid transparent;
-  border-top: 80px solid #126c4a;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-}
-.btn-2:hover {
-  color: #c7ecde;
-}
-.btn-2:hover:before {
-  -webkit-transform: translateX(-49%);
-  transform: translateX(-49%);
-}
-.btn-2:hover:after {
-  -webkit-transform: translateX(49%);
-  transform: translateX(49%);
 }
 
 .join-now {
@@ -707,7 +647,7 @@ button {
 }
 
 .first-part {
-  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
+  background-image: linear-gradient(#cd1e01 70%, #f8650c 30%);
 
   h1 {
     color: white;
@@ -796,7 +736,7 @@ button {
 }
 
 .second-part {
-  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
+  background-image: linear-gradient(#cd1e01 60%, #f8650c 40%);
   h1 {
     color: white;
     font-size: 4rem;
@@ -831,7 +771,7 @@ button {
 }
 
 .third-part {
-  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
+  background-image: linear-gradient(#cd1e01 53%, #f8650c 50%);
 
   h1 {
     color: white;
@@ -927,7 +867,7 @@ button {
 }
 
 .recent {
-  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
+  background-image: linear-gradient(#f8650c 50%, #cd1e01 50%);
 
   h1 {
     color: white;
@@ -950,17 +890,14 @@ button {
 
 .video {
   background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
-
   h1 {
     color: white;
     font-size: 4rem;
     font-weight: 800;
   }
-
   img {
     border-radius: 8px;
   }
-
   &-content {
     p {
       color: white;
@@ -1072,7 +1009,6 @@ button {
   background-color: rgba(0, 0, 0, 0.52);
   z-index: 1;
 }
-
 .button-4 {
   position: relative;
   box-sizing: border-box;
@@ -1104,10 +1040,8 @@ button {
 .button-4:hover a {
   color: #fff;
 }
-
 .video-thumbnail {
   @apply relative cursor-pointer;
-
   &:after {
     @apply absolute right-0 bottom-0 top-0 left-0;
     content: "";
