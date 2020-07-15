@@ -13,7 +13,7 @@
       <div class="video-popup" v-if="showToast">
         <div class="cursor-pointer closeToast" @click="showToast = false">x</div>
         <vue-plyr ref="popupvideo">
-          <video poster="/images/about-mic-2.jpg" :src="video_url"></video>
+          <video poster="/videos/black.jpg" :src="video_url"></video>
         </vue-plyr>
       </div>
     </transition>
@@ -406,15 +406,68 @@ A passionate thinker,writer, story teller and Speaker.</p>
         <div class="flex w-full flex-wrap">
           <div
             class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
-            v-for="p in 3"
-            :key="p"
             @click="openPlyr('/videos/video1.mp4')"
           >
             <div class="video-thumbnail">
-              <img src="/images/micsmm.jpg" alt="Video thumbnail" />
+              <img src="/videos/vthumb1.jpg" alt="Video thumbnail" />
+            </div>
+            <div class="recent-content mt-3">
+              <p>How to use your knowledge in today's world.</p>
+            </div>
+          </div>
+          <div
+            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
+            @click="openPlyr('/videos/video2.mp4')"
+          >
+            <div class="video-thumbnail">
+              <img src="/videos/vthumb2.jpg" alt="Video thumbnail" />
             </div>
             <div class="recent-content mt-3">
               <p>Video Description will be here if required.</p>
+            </div>
+          </div>
+          <div
+            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
+            @click="openPlyr('/videos/video3.mp4')"
+          >
+            <div class="video-thumbnail">
+              <img src="/videos/vthumb3.jpg" alt="Video thumbnail" />
+            </div>
+            <div class="recent-content mt-3">
+              <p>Why Public Speaking? Why Micmellows?</p>
+            </div>
+          </div>
+          <div
+            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
+            @click="openPlyr('/videos/video4.mp4')"
+          >
+            <div class="video-thumbnail">
+              <img src="/videos/vthumb4.jpg" alt="Video thumbnail" />
+            </div>
+            <div class="recent-content mt-3">
+              <p>Feedback from one of the Parent!</p>
+            </div>
+          </div>
+          <div
+            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
+            @click="openPlyr('/videos/video5.mp4')"
+          >
+            <div class="video-thumbnail">
+              <img src="/videos/vthumb5.jpg" alt="Video thumbnail" />
+            </div>
+            <div class="recent-content mt-3">
+              <p>Feedbacks from Parents.</p>
+            </div>
+          </div>
+          <div
+            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
+            @click="openPlyr('/videos/video6.mp4')"
+          >
+            <div class="video-thumbnail">
+              <img src="/videos/vthumb6.jpg" alt="Video thumbnail" />
+            </div>
+            <div class="recent-content mt-3">
+              <p>TESTIMONIAL FROM A STUDENT "SHRUTI SONTHALIA".</p>
             </div>
           </div>
         </div>
@@ -889,7 +942,7 @@ button {
 }
 
 .video {
-  background-image: linear-gradient(#f8650c 27%, #cd1e01 75%);
+  background-image: linear-gradient(#f8650c 60%, #cd1e01 40%);
   h1 {
     color: white;
     font-size: 4rem;
@@ -1055,6 +1108,10 @@ button {
     content: "";
     border-radius: 8px;
     background-color: #0000007a;
+  }
+
+  img {
+    height: 350px;
   }
 }
 </style>
