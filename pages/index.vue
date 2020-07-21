@@ -11,9 +11,9 @@
 
     <transition name="fade">
       <div class="video-popup" v-show="showToast">
-        <div class="cursor-pointer closeToast" @click="showToast = false">x</div>
+        <div class="cursor-pointer closeToast" @click="closePlyr">x</div>
         <vue-plyr ref="popupvideo">
-           <video poster="/videos/black.jpg" :src="video_url"></video>
+          <video poster="/videos/black.jpg" :src="video_url"></video>
         </vue-plyr>
       </div>
     </transition>
@@ -570,12 +570,17 @@ export default {
     //   console.log(new Date())
   },
   methods: {
+    closePlyr(){
+
+      
+      this.player.stop()
+      this.showToast = false
+
+    },
     openPlyr: function(video_url) {
       console.log(video_url);
       this.showToast = true;
-        this.video_url = video_url;
-      this.$nextTick(() => {
-      });
+      this.video_url = video_url;
     },
 
     sendEmail: function() {
