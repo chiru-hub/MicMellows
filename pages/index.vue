@@ -10,10 +10,10 @@
     </div>-->
 
     <transition name="fade">
-      <div class="video-popup" v-if="showToast">
+      <div class="video-popup" v-show="showToast">
         <div class="cursor-pointer closeToast" @click="showToast = false">x</div>
         <vue-plyr ref="popupvideo">
-          <video :src="video_url"></video>
+           <video poster="/videos/black.jpg" :src="video_url"></video>
         </vue-plyr>
       </div>
     </transition>
@@ -572,9 +572,9 @@ export default {
   methods: {
     openPlyr: function(video_url) {
       console.log(video_url);
-      this.$nextTick(() => {
+      this.showToast = true;
         this.video_url = video_url;
-        this.showToast = true;
+      this.$nextTick(() => {
       });
     },
 
