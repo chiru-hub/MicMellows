@@ -13,7 +13,7 @@
       <div class="video-popup" v-if="showToast">
         <div class="cursor-pointer closeToast" @click="showToast = false">x</div>
         <vue-plyr ref="popupvideo">
-          <video poster="/videos/black.jpg" :src="video_url"></video>
+          <video :src="video_url"></video>
         </vue-plyr>
       </div>
     </transition>
@@ -398,7 +398,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
             <img src="/images/recent1.jpg" alt />
             <div class="recent-content mt-3">
               <p>
-                Are you willing to invest in your Child's future? If yes, then you just have to take a small step. Enrol for our next upcoming Children's batch and help him/her grow into a confident speaker. 
+                Are you willing to invest in your Child's future? If yes, then you just have to take a small step. Enrol for our next upcoming Children's batch and help him/her grow into a confident speaker.
                 Registrations are OPEN! Call us!
               </p>
             </div>
@@ -413,10 +413,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
           <h1 class="text-center">Videos</h1>
         </div>
         <div class="flex w-full flex-wrap">
-          <div
-            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
-            @click="openPlyr('/videos/video1.mp4')"
-          >
+          <div class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16" @click="openPlyr('/videos/video1.mp4')">
             <div class="video-thumbnail">
               <img src="/videos/vthumb1.jpg" alt="Video thumbnail" />
             </div>
@@ -424,10 +421,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
               <p>How to use your knowledge in today's world.</p>
             </div>
           </div>
-          <div
-            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
-            @click="openPlyr('/videos/video2.mp4')"
-          >
+          <div class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16" @click="openPlyr('/videos/video2.mp4')">
             <div class="video-thumbnail">
               <img src="/videos/vthumb2.jpg" alt="Video thumbnail" />
             </div>
@@ -435,10 +429,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
               <p>Video Description will be here if required.</p>
             </div>
           </div>
-          <div
-            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
-            @click="openPlyr('/videos/video3.mp4')"
-          >
+          <div class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16" @click="openPlyr('/videos/video3.mp4')">
             <div class="video-thumbnail">
               <img src="/videos/vthumb3.jpg" alt="Video thumbnail" />
             </div>
@@ -446,10 +437,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
               <p>Why Public Speaking? Why Micmellows?</p>
             </div>
           </div>
-          <div
-            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
-            @click="openPlyr('/videos/video4.mp4')"
-          >
+          <div class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16" @click="openPlyr('/videos/video4.mp4')">
             <div class="video-thumbnail">
               <img src="/videos/vthumb4.jpg" alt="Video thumbnail" />
             </div>
@@ -457,10 +445,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
               <p>Feedback from one of the Parent!</p>
             </div>
           </div>
-          <div
-            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
-            @click="openPlyr('/videos/video5.mp4')"
-          >
+          <div class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16" @click="openPlyr('/videos/video5.mp4')">
             <div class="video-thumbnail">
               <img src="/videos/vthumb5.jpg" alt="Video thumbnail" />
             </div>
@@ -468,10 +453,7 @@ A passionate thinker,writer, story teller and Speaker.</p>
               <p>Feedbacks from Parents.</p>
             </div>
           </div>
-          <div
-            class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16"
-            @click="openPlyr('/videos/video6.mp4')"
-          >
+          <div class="w-full sm:w-1/2 md:w-1/3 p-5 pb-16" @click="openPlyr('/videos/video6.mp4')">
             <div class="video-thumbnail">
               <img src="/videos/vthumb6.jpg" alt="Video thumbnail" />
             </div>
@@ -590,8 +572,10 @@ export default {
   methods: {
     openPlyr: function(video_url) {
       console.log(video_url);
-      this.video_url = video_url;
-      this.showToast = true;
+      this.$nextTick(() => {
+        this.video_url = video_url;
+        this.showToast = true;
+      });
     },
 
     sendEmail: function() {
