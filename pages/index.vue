@@ -394,6 +394,15 @@ A passionate thinker,writer, story teller and Speaker.</p>
               </p>
             </div>
           </div>
+          <div class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-5 pb-16">
+            <img src="/images/recent1.jpg" alt />
+            <div class="recent-content mt-3">
+              <p>
+                Are you willing to invest in your Child's future? If yes, then you just have to take a small step. Enrol for our next upcoming Children's batch and help him/her grow into a confident speaker. 
+                Registrations are OPEN! Call us!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
