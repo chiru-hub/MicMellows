@@ -80,7 +80,8 @@ export default {
             '/blog/switchtrack-the-curse-of-effective',
             '/blog/ask-rightfully-for-your-rights',
             '/blog/hearing-not-listening',
-            '/blog/can-you-unlock'
+            '/blog/can-you-unlock',
+            '/blog/wearing-mask-covid19-testing'
         ]
     }
 }
