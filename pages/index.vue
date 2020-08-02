@@ -129,11 +129,8 @@
                   >Level 1 Launched( Public speaking, Communication Skills, Listening skills, Goal setting, Memory Building)</p>
                   <button
                     style="margin-top:10px"
-                    v-scroll-to="{
-                el: '.contact',
-                duration: 1000,
-            }"
-                  >Enroll</button>
+                    onclick="location.href='/marshmallow'"
+                  >Learn More</button>
                 </div>
               </div>
             </div>
@@ -152,11 +149,8 @@
                   >Level 1 - Launched ( Public speaking, Communication Skills, Listening skills)</p>
                   <button
                     style="margin-top:10px"
-                    v-scroll-to="{
-                el: '.contact',
-                duration: 1000,
-            }"
-                  >Enroll</button>
+                    onclick="location.href='/women'"
+                  >Learn More</button>
                 </div>
               </div>
             </div>
@@ -175,11 +169,8 @@
                   >Level 1 - Launched ( Public speaking, Presentation mastery, Listening skills, Interview skills)</p>
                   <button
                     style="margin-top:10px"
-                    v-scroll-to="{
-                el: '.contact',
-                duration: 1000,
-            }"
-                  >Enroll</button>
+                    onclick="location.href='/professional'"
+                  >Learn More</button>
                 </div>
               </div>
             </div>
