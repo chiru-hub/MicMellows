@@ -8,7 +8,6 @@
         <div class="flex w-full flex-wrap">
           <div
             class="w-full sm:w-1/2 md:w-1/3 xl:w-1/4"
-            v-if="p.showTime"
             v-for="p in blog_post"
             :key="p.id"
           >

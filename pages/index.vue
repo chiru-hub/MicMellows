@@ -498,6 +498,7 @@ export default {
       email: "",
       name: "",
       message: "",
+      post_length: 8,
       showTime: true,
       homeslider: [
         "/images/about-mic-2.jpg",
@@ -537,7 +538,7 @@ export default {
   mounted() {
     this.blog_post = JSON.parse(
       JSON.stringify(this.$store.state.blog_post)
-    ).reverse();
+    ).reverse().splice(0, this.post_length);
 
     for (var i = 0; i < this.blog_post.length; i++) {
       if (this.blog_post[i].id == this.blog_id) {
