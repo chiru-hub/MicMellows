@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="blog" v-if="showTime" style="background-color: #cd1e01">
+    <div class="blog mt-32">
       <div class="my-container px-5">
         <div class="p-12">
           <h1 class="text-center">Blogs</h1>
@@ -47,6 +47,7 @@ export default {
     }
   },
   mounted() {
+     $(".nav-header").addClass("darkHeader");
     this.blog_post = JSON.parse(
       JSON.stringify(this.$store.state.blog_post)
     ).reverse();
@@ -83,10 +84,14 @@ style <style lang="scss">
     background-color: #cd1e01;
   }
 
-  h1 {
-    color: white;
+  h1, h4 {
+    color: black;
     font-size: 4rem;
     font-weight: 800;
+  }
+  
+  p{
+    color: black
   }
 
   &-cards {
