@@ -538,7 +538,7 @@ export default {
   mounted() {
     this.blog_post = JSON.parse(
       JSON.stringify(this.$store.state.blog_post)
-    ).reverse().splice(0, this.post_length);
+    ).splice(0, this.post_length).reverse();
 
     for (var i = 0; i < this.blog_post.length; i++) {
       if (this.blog_post[i].id == this.blog_id) {
