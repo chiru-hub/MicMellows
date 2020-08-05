@@ -42,7 +42,7 @@
                 el: '.blog',
                 duration: 1000,
             }"
-            to="/"
+            to="/blogs"
           >Blogs</nuxt-link>
           <nuxt-link
             v-scroll-to="{

@@ -352,6 +352,9 @@ A passionate thinker,writer, story teller and Speaker.</p>
               </nuxt-link>
             </div>
           </div>
+          <div class="w-full flex justify-center pb-5">
+            <button onclick="location.href='/blogs'" class="">Read More</button>
+          </div> 
         </div>
       </div>
     </div>
@@ -507,7 +510,7 @@ export default {
       ],
 
       blog_post: [],
-      blog_id: 11,
+      blog_id: 12,
 
       errorMessage: "",
       showToast: false,
@@ -538,7 +541,7 @@ export default {
   mounted() {
     this.blog_post = JSON.parse(
       JSON.stringify(this.$store.state.blog_post)
-    ).splice(0, this.post_length).reverse();
+    ).reverse().splice(0, this.post_length);
 
     for (var i = 0; i < this.blog_post.length; i++) {
       if (this.blog_post[i].id == this.blog_id) {

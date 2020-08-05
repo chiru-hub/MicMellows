@@ -4,11 +4,13 @@ export default {
      ** Headers of the page
      */
     head: {
-        title: 'Micmellows',
+        title: 'Micmellows: Personality development & Communication skills course in Guwahati',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+            { hid: 'keywords', name: 'keywords', content: 'Personality development, Communication skills' },
+            { hid: 'description', name: 'description', content: 'No one is born public speaker, it’s a skill that can be learnt. Our personality development course will help to build confidence as well as build communication skills.' },
+
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
@@ -18,7 +20,8 @@ export default {
             }
         ],
         script: [
-            { src: "/js/jquery-3.4.1.slim.min.js" }
+            { src: "/js/jquery-3.4.1.slim.min.js" },
+            {src:"https://use.fontawesome.com/5eca4a5f63.js"}
         ]
     },
     server: {
@@ -81,7 +84,8 @@ export default {
             '/blog/ask-rightfully-for-your-rights',
             '/blog/hearing-not-listening',
             '/blog/can-you-unlock',
-            '/blog/wearing-mask-covid19-testing'
+            '/blog/wearing-mask-covid19-testing',
+            '/blog/have-you-ever-been-a'
         ]
     }
 }

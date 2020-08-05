@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-style <style lang="scss">
+<style lang="scss" scoped>
 .blog {
   &-part {
     background-color: #cd1e01;

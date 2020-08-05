@@ -3,9 +3,9 @@
     <div class="my-container mmstyle py-48">
       <div class="flex flex-wrap">
         <div class="w-full lg:w-8/12">
-          <div class="flex flex-wrap items-center justify-around">
+          <div class="flex flex-wrap items-end justify-around">
             <img class="" src="/images/fc2.jpg" alt="">
-            <h1 class="">
+            <h1 class="mt-10 md:mt-0">
               Exclusive Women's Batch
             </h1>
           </div>
@@ -52,6 +52,28 @@
     </div>
   </div>  
 </template>
+
+<script>
+export default {
+  head() {
+    return{
+       title: 'Personal goal setting | Active Listening Skills Courses in Guwahati',
+    meta: [
+      {    
+      hid: 'description',
+      name: 'description',
+      content:'Our public speaking classes is designed to give you right platform for your self-improvement, building your confidence and also includes personal goal setting, active learning skills.'
+      },
+      {    
+      hid: 'keywords',
+      name: 'keywords',
+      content:'personal goal setting, active listening skills'
+      }
+    ]
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 

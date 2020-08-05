@@ -3,9 +3,9 @@
     <div class="my-container mmstyle py-48">
       <div class="flex flex-wrap">
         <div class="w-full lg:w-8/12">
-          <div class="flex flex-wrap items-center justify-around">
+          <div class="flex flex-wrap items-end justify-around">
             <img class="" src="/images/fc3.jpg" alt="">
-            <h1 class="">
+            <h1 class="mt-10 md:mt-0">
               Professional batch 
             </h1>
           </div>
@@ -55,6 +55,28 @@
     </div>
   </div>  
 </template>
+
+<script>
+export default {
+  head() {
+    return{
+       title: 'Deep listening | Speech Script | Public Speaking Courses in Guwahati',
+    meta: [
+      {    
+      hid: 'description',
+      name: 'description',
+      content:'deep listening is a part of effective communication skills and public speaking courses develops your speech script to speak confidently in public.'
+      },
+      {    
+      hid: 'keywords',
+      name: 'keywords',
+      content:'Deep listening, Public Speaking Courses, Speech script'
+      }
+    ]
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 
