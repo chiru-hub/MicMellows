@@ -7,7 +7,7 @@
       <a class="block mb-1" href="tel:+916003680660">+91-6003680660</a>
       <a href="tel:+918486135064">+91-8486135064</a>
       <p class="mt-5">Mail Us</p>
-      <a href="mailto:micmeallowsdm@gmail.com">micmeallowsdm@gmail.com</a>
+      <a href="mailto:micmellows.dm@gmail.com">micmellows.dm@gmail.com</a>
     </div>
     <div class="w-1/2 md:w-1/3 mt-8 md:mt-0">
       <p class="mb-5">Information</p>
