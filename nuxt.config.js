@@ -86,7 +86,8 @@ export default {
             '/blog/can-you-unlock',
             '/blog/wearing-mask-covid19-testing',
             '/blog/have-you-ever-been-a',
-            '/blog/an-eye-opener-a-must-read-for-all-parents'
+            '/blog/an-eye-opener-a-must-read-for-all-parents',
+            '/blog/are-you-socially-responsible'
         ]
     }
 }

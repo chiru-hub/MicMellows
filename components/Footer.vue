@@ -3,11 +3,11 @@
   <div class="footer flex flex-wrap my-container py-12">
     <div class="w-full md:w-1/3">
       <p class="mb-5">Contacts</p>
-      <p>Call us</p>
-      <a class="block mb-1" href="tel:+916003680660">+91-6003680660</a>
-      <a href="tel:+918486135064">+91-8486135064</a>
+      <p> Call us</p>
+      <a class="block mb-1" href="tel:+916003680660"> <i class="fa fa-phone" aria-hidden="true"></i> +91-6003680660</a>
+      <a href="tel:+918486135064"> <i class="fa fa-phone" aria-hidden="true"></i> +91-8486135064</a>
       <p class="mt-5">Mail Us</p>
-      <a href="mailto:micmellows.dm@gmail.com">micmellows.dm@gmail.com</a>
+      <a href="mailto:micmellows.dm@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> micmellows.dm@gmail.com</a>
     </div>
     <div class="w-1/2 md:w-1/3 mt-8 md:mt-0">
       <p class="mb-5">Information</p>
@@ -66,7 +66,7 @@
       <a class="ml-5" href="https://www.instagram.com/micmellows/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
       <div class="mt-5">
         <p>Address</p>
-        <p style="color:white">Solapara Road, Opp Siroy Classic Hotel, Paltanbazar, Guwahati, Assam, Pin-:781032</p>
+        <p style="color:white"><i class="fa fa-map-marker" aria-hidden="true"></i> Solapara Road, Opp Siroy Classic Hotel, Paltanbazar, Guwahati, Assam, Pin-:781008</p>
       </div>
     </div>
   </div>
