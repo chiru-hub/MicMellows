@@ -87,7 +87,9 @@ export default {
             '/blog/wearing-mask-covid19-testing',
             '/blog/have-you-ever-been-a',
             '/blog/an-eye-opener-a-must-read-for-all-parents',
-            '/blog/are-you-socially-responsible'
+            '/blog/are-you-socially-responsible',
+            '/blog/three-step-formula-to-get-better-at-any-conversation',
+            '/blog/the-thankyou-list'
         ]
     }
 }
