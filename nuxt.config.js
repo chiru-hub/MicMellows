@@ -89,7 +89,9 @@ export default {
             '/blog/an-eye-opener-a-must-read-for-all-parents',
             '/blog/are-you-socially-responsible',
             '/blog/three-step-formula-to-get-better-at-any-conversation',
-            '/blog/the-thankyou-list'
+            '/blog/the-thankyou-list',
+            '/blog/what-is-your-legacy',
+            '/blog/leaders-neither-burn-the-bridges-nor-the-boats'
         ]
     }
 }
