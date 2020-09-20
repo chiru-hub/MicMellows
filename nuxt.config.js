@@ -91,7 +91,8 @@ export default {
             '/blog/three-step-formula-to-get-better-at-any-conversation',
             '/blog/the-thankyou-list',
             '/blog/what-is-your-legacy',
-            '/blog/leaders-neither-burn-the-bridges-nor-the-boats'
+            '/blog/leaders-neither-burn-the-bridges-nor-the-boats',
+            '/blog/science-or-violence'
         ]
     }
 }
