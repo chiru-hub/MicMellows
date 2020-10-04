@@ -54,7 +54,7 @@ export default {
     for (var i = 0; i < this.blog_post.length; i++) {
       if (this.blog_post[i].id == this.blog_id) {
         this.blog_post[i].showTime = false;
-        if (new Date().getTime() >= new Date("2020/09/28 08:00:00").getTime()) {
+        if (new Date().getTime() >= new Date("2020/10/05 08:00:00").getTime()) {
           this.blog_post[i].showTime = true;
         }
       } else {

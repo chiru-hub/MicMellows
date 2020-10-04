@@ -93,7 +93,8 @@ export default {
             '/blog/what-is-your-legacy',
             '/blog/leaders-neither-burn-the-bridges-nor-the-boats',
             '/blog/science-or-violence',
-            '/blog/leadership-is-all-about-bending-mending-and-fending'
+            '/blog/leadership-is-all-about-bending-mending-and-fending',
+            '/blog/are-we-moving-in-the-wrong-direction'
         ]
     }
 }
