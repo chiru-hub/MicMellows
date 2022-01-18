@@ -11,9 +11,9 @@
         "generate": "nuxt generate"
     },
     "dependencies": {
+        "@babel/core": "^7.4.5",
         "@nuxtjs/axios": "^5.3.6",
         "@nuxtjs/pwa": "^3.0.0-0",
-        "@babel/core": "^7.4.5",
         "core-js": "^2.6.5",
         "jquery": "^3.5.1",
         "nuxt": "^2.0.0",
